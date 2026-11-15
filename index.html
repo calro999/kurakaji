@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>クラカジ | 暮らしをスマートにする小型家電・雑貨家電カタログ</title>
+  <meta name="description" content="暮らしをスマートにする小型家電・雑貨家電の専門セレクトメディア「クラカジ」。卓上加湿器、コードレスアイロン、小型調理器、デスクライトなどQOLを高めるコンパクト家電を厳選比較。" />
+  <meta name="keywords" content="小型家電, 雑貨家電, コンパクト家電, 一人暮らし 家電, スマート家電, クラカジ" />
+
+  <!-- OGP -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="クラカジ | 暮らしをスマートにする小型家電カタログ" />
+  <meta property="og:description" content="暮らしを軽やかに変える、手のひら・卓上サイズの傑作家電を厳選してご案内。" />
+  <meta property="og:site_name" content="クラカジ" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://kurakaji.vercel.app/#organization",
+  "name": "クラカジ",
+  "alternateName": [
+    "Kurakaji",
+    "クラカジ編集部"
+  ],
+  "url": "https://kurakaji.vercel.app/",
+  "logo": {
+    "@type": "ImageObject",
+    "@id": "https://kurakaji.vercel.app/#logo",
+    "url": "https://kurakaji.vercel.app/favicon.svg",
+    "caption": "クラカジ ロゴ"
+  },
+  "description": "暮らしをスマートにする小型家電・生活雑貨家電のセレクト比較メディア。一人暮らしや狭い部屋にフィットする省スペース・省エネ家電を検証。",
+  "sameAs": [
+    "https://bsky.app/profile/kurakaden.bsky.social"
+  ],
+  "publishingPrinciples": "https://kurakaji.vercel.app/about.html"
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://kurakaji.vercel.app/#website",
+  "url": "https://kurakaji.vercel.app/",
+  "name": "クラカジ",
+  "description": "暮らしをスマートにする小型家電・生活家電専門カタログメディア",
+  "publisher": {
+    "@id": "https://kurakaji.vercel.app/#organization"
+  },
+  "inLanguage": "ja"
+}
+  </script>
+  <meta name="google-site-verification" content="DkCMrOjpxPVzY0T8G34bKQQDsDP9Biu83kk2wfz5hz4" />
+  <!-- Google Tag Manager / Analytics -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-P33SX8W6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+</head>
+<body>
+
+  <!-- Sticky Minimal Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <div class="brand-icon">
+          ⚡
+        </div>
+        <div class="brand-text-wrap">
+          <a href="/" class="brand-title">クラカジ</a>
+          <span class="brand-catchphrase">暮らしをスマートにする小型家電</span>
+        </div>
+      </div>
+
+      <!-- Essential Navigation -->
+      <nav class="header-nav">
+        <a href="#catalog" class="nav-link active">
+          <span>カタログ一覧</span>
+        </a>
+        <a href="#editorial" class="nav-link">
+          <span>厳選コラム</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-inner">
+      <div class="hero-pill">
+        <span>2026年最新 QOL向上ギア</span>
+      </div>
+      <h1 class="hero-heading">暮らしをスマートにする、<br />厳選・小型＆生活家電カタログ</h1>
+      <p class="hero-subtext">
+        場所をとらず、日々の家事やデスクワークを快適に。<br />
+        デザインと実用性、電気代のコスパをプロが検証した傑作小型家電のみをセレクト。
+      </p>
+    </div>
+  </section>
+
+  <!-- Category Filter Bar (Sticky) -->
+  <nav class="category-filter-wrap" aria-label="カテゴリー選択">
+    <div class="category-scroll" id="category-scroll">
+      <!-- Dynamic Category Tabs injected via JS -->
+    </div>
+  </nav>
+
+  <!-- Catalog Section -->
+  <main class="main-container" id="catalog">
+    
+    <!-- Control Bar -->
+    <div class="catalog-header">
+      <div class="catalog-title-group">
+        <h2 id="active-category-name">全商品</h2>
+        <p class="catalog-subtitle" id="item-count-badge">読み込み中...</p>
+      </div>
+
+      <div class="sort-select-wrap">
+        <span>並び順:</span>
+        <select class="sort-select" id="sort-select" aria-label="並び順を選択">
+          <option value="standard">おすすめ順</option>
+          <option value="priceAsc">価格が安い順</option>
+          <option value="priceDesc">価格が高い順</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="products-grid" id="products-grid">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- Editorial Feature Section: 2026 Winter Heating Best Buy Series -->
+    
+    <!-- Viral Tool: Winter Electricity Saving Simulator -->
+    <section id="simulator" style="margin-top: 4.5rem; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border-radius: 24px; padding: 3rem 2rem; color: #fff; box-shadow: 0 20px 40px rgba(15,23,42,0.25); border: 1px solid rgba(255,255,255,0.1);">
+      <div style="max-width: 780px; margin: 0 auto; text-align: center;">
+        <span style="background: rgba(239,68,68,0.2); color: #f87171; border: 1px solid #ef4444; font-size: 0.8rem; font-weight: 800; padding: 0.35rem 1rem; border-radius: 9999px; display: inline-block; margin-bottom: 1rem;">
+          10秒でわかる冬の電気代診断
+        </span>
+        <h2 style="font-size: 1.85rem; font-weight: 900; margin-bottom: 0.75rem; letter-spacing: -0.02em; color: #f8fafc;">あなたの冬の暖房代、いくら損してる？<br class="hidden-sm">【節電シミュレーター】</h2>
+        <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 2.25rem; line-height: 1.6;">
+          現在使っているメイン暖房器具と1日の使用時間を選ぶだけ！クラカジ推奨の「一人用こたつ」や「パネルヒーター」に変えた場合の削減額を即座に計算します。
+        </p>
+
+        <!-- Form Controls -->
+        <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 18px; padding: 2rem; margin-bottom: 2rem; text-align: left;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;">
+            <div>
+              <label style="display: block; font-size: 0.88rem; font-weight: 700; color: #cbd5e1; margin-bottom: 0.5rem;">
+                ① 現在メインで使っている暖房
+              </label>
+              <select id="sim-current-heater" style="width: 100%; padding: 0.85rem 1rem; border-radius: 10px; border: 1px solid #475569; background: #0f172a; color: #fff; font-size: 0.95rem; font-weight: 600; cursor: pointer;">
+                <option value="700">エアコン暖房（平均 700W）</option>
+                <option value="1100">セラミックファンヒーター（約 1,100W）</option>
+                <option value="1300">オイルヒーター（約 1,300W）</option>
+                <option value="400">電気ストーブ・カーボン（約 400W）</option>
+                <option value="350">ホットカーペット 2畳（約 350W）</option>
+              </select>
+            </div>
+
+            <div>
+              <label style="display: block; font-size: 0.88rem; font-weight: 700; color: #cbd5e1; margin-bottom: 0.5rem;">
+                ② 1日の平均使用時間
+              </label>
+              <select id="sim-hours" style="width: 100%; padding: 0.85rem 1rem; border-radius: 10px; border: 1px solid #475569; background: #0f172a; color: #fff; font-size: 0.95rem; font-weight: 600; cursor: pointer;">
+                <option value="4">4時間（夜間・帰宅後のみ）</option>
+                <option value="8" selected>8時間（標準・在宅勤務）</option>
+                <option value="12">12時間（休日常時・ロング）</option>
+                <option value="16">16時間（ほぼ1日中）</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Result Box -->
+        <div id="sim-result-box" style="background: linear-gradient(135deg, rgba(37,99,235,0.15) 0%, rgba(16,185,129,0.15) 100%); border: 2px solid #10b981; border-radius: 18px; padding: 2rem; margin-bottom: 2rem;">
+          <div style="font-size: 0.9rem; color: #cbd5e1; margin-bottom: 0.5rem;">現在の暖房代（1ヶ月・30日計算）</div>
+          <div id="sim-current-cost" style="font-size: 1.8rem; font-weight: 900; color: #f87171; margin-bottom: 1.25rem;">約 5,208円 / 月</div>
+
+          <div style="border-top: 1px dashed rgba(255,255,255,0.2); padding-top: 1.25rem;">
+            <div style="font-size: 0.95rem; color: #a7f3d0; font-weight: 700; margin-bottom: 0.35rem;">
+              🎉 一人用こたつ（弱運転 75W）に切り替えた場合
+            </div>
+            <div style="display: flex; align-items: baseline; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span style="font-size: 1.1rem; color: #cbd5e1;">月額たったの</span>
+              <span id="sim-new-cost" style="font-size: 2rem; font-weight: 900; color: #34d399;">約 558円</span>
+              <span style="font-size: 1.25rem; font-weight: 800; color: #fbbf24;">（月 <span id="sim-saved-cost">4,650</span>円 お得！）</span>
+            </div>
+            <div style="font-size: 0.88rem; color: #94a3b8; margin-top: 0.5rem;">
+              ※冬の3ヶ月間で <strong id="sim-winter-saved" style="color: #fbbf24; font-size: 1.1rem;">約 13,950円</strong> の節約になります。
+            </div>
+          </div>
+        </div>
+
+        <!-- Share & Action Buttons -->
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a id="sim-share-x" href="#" target="_blank" rel="noopener" style="background: #000; color: #fff; padding: 0.85rem 1.8rem; border-radius: 9999px; font-weight: 800; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; border: 1px solid #334155; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
+            Bsky 診断結果をポストして教える
+          </a>
+          <a href="/articles/single-person-kotatsu-heater-best10.html" style="background: #2563eb; color: #fff; padding: 0.85rem 1.8rem; border-radius: 9999px; font-weight: 800; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; box-shadow: 0 4px 15px rgba(37,99,235,0.4);">
+            🔥 一人用こたつTOP10を見る →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="editorial" style="margin-top: 4.5rem; padding-top: 3rem; border-top: 1px solid var(--color-border);">
+      <div style="text-align: center; margin-bottom: 2.25rem;">
+        <span style="font-size: 0.8rem; font-weight: 800; color: #0284c7; letter-spacing: 0.05em; text-transform: uppercase; background: #e0f2fe; padding: 0.25rem 0.8rem; border-radius: var(--radius-full);">クラカジ編集部 厳選特集＆検証コラム（全50本）</span>
+        <h2 style="font-size: 1.65rem; font-weight: 800; color: var(--color-text-main); margin-top: 0.6rem;">暮らしを激変させる厳選小型家電ガイド</h2>
+        <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-top: 0.4rem;">一人暮らし・狭い部屋・冬籠り防寒・電気代節約・タイパを極めた全50本の名機徹底検証。</p>
+      </div>
+
+      <!-- Pillar Rankings Grid (27 Pillar Guides) -->
+      <h3 style="font-size: 1.3rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem;">人気小型家電おすすめランキングTOP7〜10（全28本）</h3>
+      <div class="editorial-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3.5rem;">
+        
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">人気ランキング</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/circulator-clothes-drying-best7.html" style="color: var(--color-text-main); text-decoration: none;">部屋干し臭ゼロ！サーキュレーターおすすめTOP7</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            雨の日の部屋干しでも生乾き臭を防ぐ！3D首振りで洗濯物を3倍速く乾かすDCモーターサーキュレーターおすすめ7選。月55円の圧倒的省エネでエアコン代も3…
+          </p>
+          <a href="/articles/circulator-clothes-drying-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">油なし自炊・時短</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/compact-air-fryer-best7.html" style="color: var(--color-text-main); text-decoration: none;">小型ノンフライヤーおすすめTOP7！油なし調理</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            油を使わず外サク中ジューシー！狭い1Kキッチンに置けるA4サイズの小型ノンフライヤーTOP7を検証。総菜の温め直しや自炊ヘルシー時短に最適な名機を比較…
+          </p>
+          <a href="/articles/compact-air-fryer-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">人気ランキング</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/compact-air-purifier-humidifier-best7.html" style="color: var(--color-text-main); text-decoration: none;">花粉と乾燥を撃退！卓上加湿空気清浄機TOP7</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            寝室やデスク周りの花粉・乾燥をこれ1台でブロック！シャーププラズマクラスターや静音設計の小型加湿空気清浄機7選。ワンルームに置いても邪魔にならないモデ…
+          </p>
+          <a href="/articles/compact-air-purifier-humidifier-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">人気ランキング</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/compact-blender-smoothie-best7.html" style="color: var(--color-text-main); text-decoration: none;">ボトル直飲み！小型ブレンダー＆ミキサーTOP7</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            作ったボトルでそのまま飲める！プロテインや冷凍スムージーが数秒で作れる一人暮らし向け小型ブレンダー7選。氷も砕けるハイパワーで洗い物が最小限で済む時短…
+          </p>
+          <a href="/articles/compact-blender-smoothie-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">2秒速暖・個室防寒</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/compact-ceramic-heater-best7.html" style="color: var(--color-text-main); text-decoration: none;">小型セラミックヒーターおすすめTOP7！即暖</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            スイッチONで2秒速暖！トイレや脱衣所のヒートショック対策から足元暖房まで。人感センサーと転倒オフ機能を搭載した小型セラミックファンヒーターTOP7を…
+          </p>
+          <a href="/articles/compact-ceramic-heater-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">朝時短・全自動</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/compact-coffee-maker-best7.html" style="color: var(--color-text-main); text-decoration: none;">小型コーヒーメーカーおすすめTOP7！朝1杯</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            朝の1杯を極上に！デスクや狭いキッチンの隙間に置ける幅15cm以下の小型全自動コーヒーメーカーTOP7。豆挽きから抽出までボタン1つの時短モデルを徹底…
+          </p>
+          <a href="/articles/compact-coffee-maker-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">人気ランキング</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/compact-dehumidifier-room-drying-best7.html" style="color: var(--color-text-main); text-decoration: none;">部屋干し速乾！一人暮らし用小型除湿機TOP7</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            雨の日でも洗濯物がカラッと乾く！ワンルームや脱衣所に置けるA4サイズの小型衣類乾燥除湿機7選。1日5円から使える省エネコンプレッサー式と結露対策モデル…
+          </p>
+          <a href="/articles/compact-dehumidifier-room-drying-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">パーソナル冷風・節電</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/compact-desk-cooler-fan-best7.html" style="color: var(--color-text-main); text-decoration: none;">卓上冷風扇おすすめTOP7！エアコンなし部屋に</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            初夏から真夏の電気代対策！エアコンのない狭い部屋やテレワークのデスクで気化熱の涼風を届ける卓上冷風扇TOP7。USB給電と保冷剤対応モデルの冷却力を検…
+          </p>
+          <a href="/articles/compact-desk-cooler-fan-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">快眠・超節電</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/compact-electric-blanket-best7.html" style="color: var(--color-text-main); text-decoration: none;">電気毛布おすすめTOP7！節電快眠モデル比較</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            冬のエアコン代を劇的に削る！1時間わずか約1.5円で朝まで温かい電気毛布・敷き毛布おすすめTOP7を徹底検証。タイマー機能と丸洗い対応モデルの選び方を…
+          </p>
+          <a href="/articles/compact-electric-blanket-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">人気ランキング</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/compact-electric-kettle-best7.html" style="color: var(--color-text-main); text-decoration: none;">朝1分で速沸！一人暮らし向け電気ケトルTOP7</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            コーヒーも白湯もこれ1台！1℃刻みで温度調節できる一人暮らし向け電気ケトル7選。保温ポットより年間1万円節約できる都度沸かしの高コスパモデルを徹底比較…
+          </p>
+          <a href="/articles/compact-electric-kettle-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">ほったらかし絶品煮込み</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/compact-electric-pressure-cooker-best7.html" style="color: var(--color-text-main); text-decoration: none;">電気圧力鍋おすすめTOP7！冬の煮込み時短</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            冬籠りの定番おでんや角煮がボタン1つでトロトロ！火を使わずほったらかしで本格料理ができる一人暮らし向けコンパクト電気圧力鍋TOP7を徹底比較します。…
+          </p>
+          <a href="/articles/compact-electric-pressure-cooker-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">雪かき革命・冬籠り</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/compact-electric-snow-blower-best7.html" style="color: var(--color-text-main); text-decoration: none;">家庭用小型電動除雪機おすすめTOP7！玄関用</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            冬の雪かき重労働から解放！女性や高齢者でも片手で扱える1〜5万円前後の家庭用小型電動除雪機TOP7を徹底比較。玄関先や駐車場の新雪をスコップの10倍速…
+          </p>
+          <a href="/articles/compact-electric-snow-blower-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">🔥 2026年最新 暖房＆快眠小型家電特集</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/compact-futon-dryer-best10.html" style="color: var(--color-text-main); text-decoration: none;">冷たい布団を即ホカホカ！布団乾燥機TOP10</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            マット不要3秒セット！冬の冷たい布団を温め、ダニ退治や雨の日の靴乾燥までこなすコンパクト布団乾燥機10選。アイリスオーヤマ カラリエやツインノズル名機…
+          </p>
+          <a href="/articles/compact-futon-dryer-best10.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">人気ランキング</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/compact-hotplate-single-best7.html" style="color: var(--color-text-main); text-decoration: none;">一人鍋や焼肉に！卓上小型ホットプレートTOP7</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            狭い食卓でアツアツ自炊！A4サイズで一人鍋や焼肉、たこ焼きが楽しめる卓上小型ホットプレート7選。プレート丸洗い可能で後片付けも簡単な人気モデルを徹底比…
+          </p>
+          <a href="/articles/compact-hotplate-single-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">人気ランキング</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/compact-rice-cooker-single-best7.html" style="color: var(--color-text-main); text-decoration: none;">最短14分炊飯！一人暮らし小型炊飯器TOP7</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            0.5合から美味しく炊ける！お弁当箱サイズからおかず同時調理対応まで、一人暮らしに最適な小型炊飯器7選。少量でもふっくら甘く炊き上がるタイパ名機を徹底…
+          </p>
+          <a href="/articles/compact-rice-cooker-single-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">消臭・速乾</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/compact-shoe-dryer-best7.html" style="color: var(--color-text-main); text-decoration: none;">靴乾燥機おすすめTOP7！雨や生乾き臭を撃退</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            雨の日の通勤通学靴や冬のブーツの生乾き臭をゼロに！コンパクトで玄関に置ける靴乾燥機おすすめTOP7を検証。オゾン消臭と自動オフタイマーの選び方を完全解…
+          </p>
+          <a href="/articles/compact-shoe-dryer-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">人気ランキング</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/compact-toaster-oven-best7.html" style="color: var(--color-text-main); text-decoration: none;">狭いキッチンに！縦型スリムトースターTOP7</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            幅24cmでキッチンの隙間にすっきり収まる！電子レンジのトースト機能より5倍速い縦型スリムトースター7選。外サク中フワに2枚同時に焼ける省スペース名機…
+          </p>
+          <a href="/articles/compact-toaster-oven-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">結露遮断・暖房効率</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/compact-window-radiator-best7.html" style="color: var(--color-text-main); text-decoration: none;">結露防止ヒーターおすすめTOP7！窓際カビ撃退</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            窓ガラスの結露水滴とカビを元から遮断！冷気の侵入（コールドドラフト）を防いで暖房効率を劇的に高めるマルチ窓下ヒーターおすすめTOP7の電気代と効果を検…
+          </p>
+          <a href="/articles/compact-window-radiator-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">🔥 2026年最新 暖房＆快眠小型家電特集</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/desk-panel-heater-best10.html" style="color: var(--color-text-main); text-decoration: none;">デスク足元の冷え撃退！パネルヒーターTOP10</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            机の下に置くだけで即席こたつ化！風が出ず乾燥ゼロ、1時間約4円の遠赤外線デスクパネルヒーター10選。5面発熱・ラウンド型・折りたたみなど在宅ワークの必…
+          </p>
+          <a href="/articles/desk-panel-heater-best10.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">人気ランキング</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/electric-lint-remover-best7.html" style="color: var(--color-text-main); text-decoration: none;">服が新品によみがえる！電動毛玉取り器TOP7</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            捨てる予定だったセーターや毛布が新品同様に復活！服の生地を傷つけずごっそり毛玉を刈り取る最新6枚刃・充電式電動毛玉取り器おすすめ7選。タイパ抜群の毛玉…
+          </p>
+          <a href="/articles/electric-lint-remover-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">アレルギー対策・快眠</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/futon-vacuum-cleaner-best7.html" style="color: var(--color-text-main); text-decoration: none;">布団クリーナーおすすめTOP7！ダニ退治検証</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            天日干しできない冬や花粉時期の必需品！毎分1万回以上の高速たたきと温風機能でダニやハウスダストをごっそり吸引する布団クリーナーおすすめTOP7を徹底比…
+          </p>
+          <a href="/articles/futon-vacuum-cleaner-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">人気ランキング</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/handy-garment-steamer-best7.html" style="color: var(--color-text-main); text-decoration: none;">アイロン台不要！ハンディ衣類スチーマーTOP7</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            朝の出勤前にハンガーのまま20秒でシワ伸ばし！飲食・タバコ臭を99%消臭する一人暮らし向けハンディ衣類スチーマー7選。軽量で腕が疲れない神タイパ家電を…
+          </p>
+          <a href="/articles/handy-garment-steamer-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">人気ランキング</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/handy-vacuum-cleaner-best7.html" style="color: var(--color-text-main); text-decoration: none;">車や机の掃除に！小型ハンディクリーナーTOP7</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            重い掃除機を出すのはもう終わり！机の食べこぼしや車内、キーボードの隙間を500gの超軽量で一瞬で吸い込むコードレスハンディクリーナー7選。Type-C…
+          </p>
+          <a href="/articles/handy-vacuum-cleaner-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">🔥 2026年最新 暖房家電・季節特集</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/large-room-heater-best10.html" style="color: var(--color-text-main); text-decoration: none;">広い部屋も即暖！リビング暖房器具TOP10</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            12〜20畳のリビング全体をムラなく暖める！乾燥知らずのオイルレスヒーターや大風量セラミックファンヒーター10選。電気代を抑えて部屋全体を陽だまりにす…
+          </p>
+          <a href="/articles/large-room-heater-best10.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">自炊時短・省スペース</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/multifunction-cooker-compact-best7.html" style="color: var(--color-text-main); text-decoration: none;">狭い部屋向け多機能調理家電おすすめTOP7選</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            1Kやワンルームの狭い一口コンロでも快適自炊！煮る・焼く・蒸すを1台でこなす省スペース多機能調理家電TOP7。洗い物が激減するスタッキング名機を徹底比…
+          </p>
+          <a href="/articles/multifunction-cooker-compact-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">🔥 2026年最新 暖房家電・季節特集</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/single-person-kotatsu-heater-best10.html" style="color: var(--color-text-main); text-decoration: none;">電気代1時間2円！一人用デスクこたつTOP10</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            エアコン暖房より電気代が1/10！椅子に座ってテレワークできるハイタイプからミニこたつまで一人用こたつ10選。狭いワンルームでも置けて冬の電気代を削る…
+          </p>
+          <a href="/articles/single-person-kotatsu-heater-best10.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">人気ランキング</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/ultrasonic-cleaner-glasses-best7.html" style="color: var(--color-text-main); text-decoration: none;">メガネや時計の皮脂汚れ落とし！超音波洗浄機TOP7</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            クロスで拭いても落ちないメガネの鼻パッドや腕時計の隙間汚れが、水を入れて数分でピカピカに！40,000Hz超音波振動で皮脂を乳化洗浄する小型超音波クリ…
+          </p>
+          <a href="/articles/ultrasonic-cleaner-glasses-best7.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #38bdf8; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f0f9ff; font-size: 0.75rem; font-weight: 800; color: #0284c7;">🔥 2026年最新 暖房家電・季節特集</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">TOP7〜10</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/wearable-blanket-rechargeable-warmer-best10.html" style="color: var(--color-text-main); text-decoration: none;">着る毛布＆カイロ！電気代1日1円暖房TOP10</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            部屋全体を温めずに自分だけ即ポカポカ！USB給電で丸洗いできる電気着る毛布と充電式カイロ10選。モバイルバッテリー対応で暖房代を月数千円浮かせる防寒ギ…
+          </p>
+          <a href="/articles/wearable-blanket-rechargeable-warmer-best10.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #0284c7; color: #fff; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            ランキングを読む →
+          </a>
+        </article>
+      </div>
+
+      <!-- Cluster Columns Grid (23 Cluster Columns) -->
+      <h3 style="font-size: 1.3rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem;">家電の選び方・電気代比較・失敗回避コラム（全22本）</h3>
+      <div class="editorial-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+        
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">空調電気代の真実</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/ac-keep-on-vs-off-electricity-test.html" style="color: var(--color-text-main); text-decoration: none;">エアコンつけっぱなしvsこまめ消し！電気代検証</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            冬の暖房や夏の冷房はつけっぱなしの方が安い？30分の外出なら切るべきか、小型サーキュレーター併用で電気代を月数千円下げるプロの実践検証データを公開。…
+          </p>
+          <a href="/articles/cluster/ac-keep-on-vs-off-electricity-test.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">自炊調理器対決</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/air-fryer-vs-toaster-comparison.html" style="color: var(--color-text-main); text-decoration: none;">ノンフライヤーvsトースター！揚げ物自炊比較</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            一人暮らしにノンフライヤーは本当に必要？オーブントースターとの焼き上がり、揚げ物のサクサク感、油カット率、お手入れの手間を実機テストで白黒判定します。…
+          </p>
+          <a href="/articles/cluster/air-fryer-vs-toaster-comparison.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">解説コラム</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/air-purifier-pollen-placement-guide.html" style="color: var(--color-text-main); text-decoration: none;">空気清浄機はどこに置く？寝室の最適配置</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            重い花粉を床に落とさず吸い尽くす！玄関・エアコン向かい・ベッド足元など効果が劇的に変わる3大ベストポジションを解説。花粉症のモーニングアタックを防ぐ完…
+          </p>
+          <a href="/articles/cluster/air-purifier-pollen-placement-guide.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">解説コラム</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/circulator-vs-fan-electricity-cost.html" style="color: var(--color-text-main); text-decoration: none;">サーキュレーター vs 扇風機！電気代比較</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            どっちを買うべき？月55円のDCサーキュレーターと扇風機の電気代・乾燥速度・風の届き方をガチ比較。一人暮らしの部屋干しやエアコン併用で損しない正解を解…
+          </p>
+          <a href="/articles/cluster/circulator-vs-fan-electricity-cost.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">解説コラム</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/clothes-drying-smell-complete-guide.html" style="color: var(--color-text-main); text-decoration: none;">部屋干しの生乾き臭を消す干し方と配置術</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            雨の日でも臭わない！雑菌モラクセラ菌の増殖を防ぐ5時間以内乾燥の鉄則。サーキュレーターの真下垂直送風とアーチ干しで部屋干し臭をゼロにする配置テクニック…
+          </p>
+          <a href="/articles/cluster/clothes-drying-smell-complete-guide.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">解説コラム</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/compact-rice-cooker-tasty-guide.html" style="color: var(--color-text-main); text-decoration: none;">小型炊飯器でご飯を極上に炊く裏ワザ完全ガイド</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            一人暮らし用の小型炊飯器でご飯が硬い・パサつくと悩んでいませんか？浸水30分の魔法、水加減の微調整、氷1個を入れる急速沸騰テクニックなど、安価な小型炊…
+          </p>
+          <a href="/articles/cluster/compact-rice-cooker-tasty-guide.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">掃除効率・比較検証</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/cordless-vacuum-vs-robot-cleaner.html" style="color: var(--color-text-main); text-decoration: none;">コードレス掃除機vsロボット！狭い部屋対決</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            一人暮らしやワンルームの部屋掃除はどっちが正解？コードレススティック掃除機とロボット掃除機の電気代、床置き障害物、掃除効率を一人暮らし目線で徹底比較し…
+          </p>
+          <a href="/articles/cluster/cordless-vacuum-vs-robot-cleaner.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">解説コラム</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/dehumidifier-vs-ac-dry-cost.html" style="color: var(--color-text-main); text-decoration: none;">除湿機 vs エアコン除湿！電気代と乾燥速度比較</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            梅雨や夏の部屋干し、除湿機とエアコンのドライ運転はどっちがお得？1ヶ月の電気代シミュレーション、弱冷房除湿と再熱除湿の罠、洗濯物が最も早く乾く正解を徹…
+          </p>
+          <a href="/articles/cluster/dehumidifier-vs-ac-dry-cost.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">解説コラム</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/electric-blanket-all-night-danger.html" style="color: var(--color-text-main); text-decoration: none;">電気毛布の朝までつけっぱなしが危険な理由</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            翌朝の体のだるさや喉の渇きは脱水が原因？深部体温の低下を邪魔しない就寝30分前予熱とタイマー活用術を解説。電気代月100円で安全に熟睡できる正しい使い…
+          </p>
+          <a href="/articles/cluster/electric-blanket-all-night-danger.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">デスク防寒対決</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/electric-blanket-vs-panel-heater.html" style="color: var(--color-text-main); text-decoration: none;">電気毛布vsパネルヒーター！デスク電気代比較</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            冬のテレワークやデスク作業の足元防寒はどっちが得？電気毛布とデスクパネルヒーターの消費電力、即暖性、眠気対策、掃除のしやすさを一人暮らし目線で徹底比較…
+          </p>
+          <a href="/articles/cluster/electric-blanket-vs-panel-heater.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">解説コラム</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/electric-kettle-vs-pot-cost.html" style="color: var(--color-text-main); text-decoration: none;">電気ケトル vs ポット！保温電気代の損得</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            お湯を沸かすならどっちが安い？都度沸かしのケトルと保温ポットの電気代を試算。24時間保温で年間約1万円損する理由と、一人暮らしに最適な給湯スタイルを解…
+          </p>
+          <a href="/articles/cluster/electric-kettle-vs-pot-cost.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">除雪機の真実・注意点</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/electric-snow-blower-real-experience.html" style="color: var(--color-text-main); text-decoration: none;">家庭用電動除雪機は本当に使える？雪質と注意点</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            1〜5万円の小型電動除雪機は豪雪地帯でも通用する？サラサラの新雪と重い湿った雪での投雪能力の違い、延長コードの防水対策、失敗しない選び方を徹底解説。…
+          </p>
+          <a href="/articles/cluster/electric-snow-blower-real-experience.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">解説コラム</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/futon-dryer-dani-guide.html" style="color: var(--color-text-main); text-decoration: none;">布団乾燥機でダニを死滅させる温度と時間</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            天日干しでは死なない！50℃以上20分の熱風運転と裏返し、死骸をアレルゲンにしない乾燥直後の掃除機吸引法をプロが解説。科学的に証明された最も確実なダニ…
+          </p>
+          <a href="/articles/cluster/futon-dryer-dani-guide.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">加湿方式徹底比較</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/humidifier-steam-vs-ultrasonic.html" style="color: var(--color-text-main); text-decoration: none;">加湿器どれがいい？スチーム式vs超音波式比較</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            冬の乾燥やウイルス対策に最適な加湿方式はどれ？雑菌が繁殖しないスチーム式と電気代が安い超音波式・気化式の電気代、加湿速度、お手入れの手間を徹底検証。…
+          </p>
+          <a href="/articles/cluster/humidifier-steam-vs-ultrasonic.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">解説コラム</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/kotatsu-electricity-cost.html" style="color: var(--color-text-main); text-decoration: none;">一人用こたつの電気代！エアコン併用節電術</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            1日8時間使っても月約530円！サーモスタットによる自動オンオフの仕組みとエアコン併用の節電効果を徹底検証。冬のテレワークや一人暮らしで最も電気代が浮…
+          </p>
+          <a href="/articles/cluster/kotatsu-electricity-cost.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">解説コラム</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/panel-heater-vs-ceramic.html" style="color: var(--color-text-main); text-decoration: none;">パネルヒーター vs セラミック！足元暖房対決</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            電気代の差は月7,000円！無音・無風・乾燥なしの遠赤外線パネルヒーターと、2秒で即温風が出るセラミックの性能・コストを徹底比較。在宅ワークに最適な選…
+          </p>
+          <a href="/articles/cluster/panel-heater-vs-ceramic.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">新生活・失敗回避</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/single-life-appliance-package-vs-single.html" style="color: var(--color-text-main); text-decoration: none;">一人暮らし家電セットは損？単品買い徹底比較</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            新生活家電セットは本当に得？スペックの低さで後悔する理由と、必要最小限の高性能モデルを1万円台から高コスパに単品で揃える正解ルートを徹底比較検証します…
+          </p>
+          <a href="/articles/cluster/single-life-appliance-package-vs-single.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">解説コラム</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/single-life-appliances-regret-top5.html" style="color: var(--color-text-main); text-decoration: none;">一人暮らしで買って後悔した家電ワースト5</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            新生活家電セットの罠！一人暮らし経験者が「結局使わなくなった」と後悔した家電ワースト5（大型アイロン・トースター等）を暴露。狭い部屋を圧迫しない省スペ…
+          </p>
+          <a href="/articles/cluster/single-life-appliances-regret-top5.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">停電防止・配線術</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/single-life-breaker-trip-prevention.html" style="color: var(--color-text-main); text-decoration: none;">一人暮らしでブレーカーが落ちる原因と家電配置</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            電子レンジと電気ケトルを同時に使うと停電する理由とは？一人暮らし20A〜30Aのアンペア数制限を乗り切る家電のワット数計算と安全なコンセント配置術。…
+          </p>
+          <a href="/articles/cluster/single-life-breaker-trip-prevention.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">食器洗い自動化</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/single-life-dishwasher-necessity.html" style="color: var(--color-text-main); text-decoration: none;">一人暮らしに食洗機はいらない？後悔回避ガイド</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            狭い賃貸キッチンにタンク式小型食洗機は本当に置ける？購入者のリアルな後悔理由と、手洗いより水道代が浮く分岐水栓不要モデルの導入メリットを徹底解説検証し…
+          </p>
+          <a href="/articles/cluster/single-life-dishwasher-necessity.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">解説コラム</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/toaster-vs-microwave-toast.html" style="color: var(--color-text-main); text-decoration: none;">トースター vs レンジ！トースト機能比較</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            レンジのトースト機能は遅くて裏返しが必要？2分半で焼けるトースターとの焼き時間・サクサク感・味の違いを実食検証。狭いキッチンで本当に買うべきかを徹底判…
+          </p>
+          <a href="/articles/cluster/toaster-vs-microwave-toast.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+        <article style="background: #fff; padding: 1.35rem; border-radius: var(--radius-lg); border: 1.5px solid #cbd5e1; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <span style="padding: 0.25rem 0.65rem; border-radius: var(--radius-full); background: #f8fafc; font-size: 0.75rem; font-weight: 800; color: #64748b;">解説コラム</span>
+            <span style="font-size: 0.75rem; color: var(--color-text-muted);">検証コラム</span>
+          </div>
+          <h3 style="font-size: 1rem; font-weight: 800; margin-bottom: 0.65rem; line-height: 1.45;"><a href="/articles/cluster/winter-electricity-bill-saving-hacks.html" style="color: var(--color-text-main); text-decoration: none;">冬の電気代を月1万円削る小型家電節電術</a></h3>
+          <p style="font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 1.1rem; flex: 1;">
+            エアコン単体稼働は高額請求の元！エアコン設定20℃＋一人用こたつ・パネルヒーター・サーキュレーター併用で暖かさをキープしながら月1万円節電する最強マニ…
+          </p>
+          <a href="/articles/cluster/winter-electricity-bill-saving-hacks.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 0.35rem; width: 100%; padding: 0.6rem 1rem; background: #f1f5f9; color: #0284c7; font-weight: 700; font-size: 0.85rem; border-radius: var(--radius-md); text-decoration: none;">
+            解説記事を読む →
+          </a>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+      <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand-note">
+        <strong style="color: var(--color-text-main); font-size: 1.05rem;">クラカジ</strong>
+        <p style="margin-top: 0.4rem; color: var(--color-text-muted);">
+          暮らしをスマートにする小型家電・生活雑貨家電のセレクトカタログメディア。<br />
+          ※当サイトはアフィリエイト広告を利用して商品をご紹介しています。
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="フッターリンク">
+        <a href="/about.html">クラカジについて・編集部紹介</a>
+        <a href="/terms.html">利用規約</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+      </nav>
+
+      <div class="copyright">
+        &copy; 2026 クラカジ (Kurakaji) All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initApp } from '/src/main.js';
+    initApp();
+  </script>
+
+<script>
+(function() {
+  const currentSelect = document.getElementById('sim-current-heater');
+  const hoursSelect = document.getElementById('sim-hours');
+  const currentCostEl = document.getElementById('sim-current-cost');
+  const newCostEl = document.getElementById('sim-new-cost');
+  const savedCostEl = document.getElementById('sim-saved-cost');
+  const winterSavedEl = document.getElementById('sim-winter-saved');
+  const shareBtn = document.getElementById('sim-share-x');
+
+  if (!currentSelect || !hoursSelect) return;
+
+  function recalculate() {
+    const watts = parseInt(currentSelect.value, 10);
+    const hours = parseInt(hoursSelect.value, 10);
+    const kwhPrice = 31; // yen/kWh
+
+    // Current cost (30 days)
+    const currentMonthly = Math.round((watts / 1000) * hours * 30 * kwhPrice);
+
+    // Kotatsu cost (75W average)
+    const kotatsuMonthly = Math.round((75 / 1000) * hours * 30 * kwhPrice);
+
+    const saved = currentMonthly - kotatsuMonthly;
+    const winterSaved = saved * 3;
+
+    currentCostEl.textContent = `約 ${currentMonthly.toLocaleString()}円 / 月`;
+    newCostEl.textContent = `約 ${kotatsuMonthly.toLocaleString()}円`;
+    savedCostEl.textContent = saved.toLocaleString();
+    winterSavedEl.textContent = `約 ${winterSaved.toLocaleString()}円`;
+
+    const selectedHeaterName = currentSelect.options[currentSelect.selectedIndex].text.split('（')[0];
+    const tweetText = encodeURIComponent(`冬の暖房代を診断したら、${selectedHeaterName}から「一人用こたつ」に変えるだけで冬3ヶ月で【${winterSaved.toLocaleString()}円】も浮くことが判明…！\n\n電気代ヤバい人は10秒で計算できるからやってみて👇\n`);
+    const tweetUrl = encodeURIComponent('https://kurakaji.vercel.app/#simulator');
+    shareBtn.href = `https://bsky.app/intent/compose?text=${tweetText}&url=${tweetUrl}&hashtags=電気代高騰,クラカジ,節電`;
+  }
+
+  currentSelect.addEventListener('change', recalculate);
+  hoursSelect.addEventListener('change', recalculate);
+  recalculate();
+})();
+</script>
+
+
+  <!-- Floating Social Share Bar (Mobile & Desktop) -->
+  <aside class="floating-share-bar" aria-label="記事を共有" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; display: flex; gap: 10px; align-items: center; background: rgba(15,23,42,0.92); backdrop-filter: blur(8px); padding: 8px 14px; border-radius: 9999px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.15);">
+    <span style="color: #94a3b8; font-size: 0.75rem; font-weight: 700; display: none;" class="share-label">シェア</span>
+    <a href="https://bsky.app/intent/compose?url=https%3A%2F%2Fkurakaji.vercel.app&text=%E3%80%902026%E6%9C%80%E6%96%B0%E3%80%91%E6%9A%AE%E3%82%89%E3%81%97%E3%82%92%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88%E3%81%AB%E3%81%99%E3%82%8B%E5%AE%B6%E9%9B%BB%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%80%8C%E3%82%AF%E3%83%A9%E3%82%AC%E3%82%B8%E3%80%8D" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #000; color: #fff; text-decoration: none; font-size: 0.85rem; font-weight: 900;" title="Blueskyで共有">
+      Bsky
+    </a>
+    <a href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fkurakaji.vercel.app" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #06c755; color: #fff; text-decoration: none; font-size: 0.85rem; font-weight: 900;" title="LINEで送る">
+      L
+    </a>
+    <a href="https://b.hatena.ne.jp/entry/s/kurakaji.vercel.app" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #00a4de; color: #fff; text-decoration: none; font-size: 0.85rem; font-weight: 900;" title="はてなブックマークに追加">
+      B!
+    </a>
+  </aside>
+
+</body>
+</html>

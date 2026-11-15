@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>一人暮らしでブレーカーが落ちる原因と家電配置 | クラカジ</title>
+  <meta name="description" content="電子レンジと電気ケトルを同時に使うと停電する理由とは？一人暮らし20A〜30Aのアンペア数制限を乗り切る家電のワット数計算と安全なコンセント配置術。" />
+  <link rel="canonical" href="https://kurakaji.vercel.app/articles/cluster/single-life-breaker-trip-prevention.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <!-- Google Discover & OGP Tags -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="一人暮らしでブレーカーが落ちる原因と家電配置 | クラカジ" />
+  <meta property="og:description" content="電子レンジと電気ケトルを同時に使うと停電する理由とは？一人暮らし20A〜30Aのアンペア数制限を乗り切る家電のワット数計算と安全なコンセント配置術。" />
+  <meta property="og:url" content="https://kurakaji.vercel.app/articles/cluster/single-life-breaker-trip-prevention.html" />
+  <meta property="og:site_name" content="クラカジ" />
+  <meta property="og:image" content="https://tshop.r10s.jp/panasonic-store/cabinet/banner/12923490/nc-a58_main_007.jpg?_ex=600x600" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="一人暮らしでブレーカーが落ちる原因と家電配置 | クラカジ" />
+  <meta name="twitter:description" content="電子レンジと電気ケトルを同時に使うと停電する理由とは？一人暮らし20A〜30Aのアンペア数制限を乗り切る家電のワット数計算と安全なコンセント配置術。" />
+  <meta name="twitter:image" content="https://tshop.r10s.jp/panasonic-store/cabinet/banner/12923490/nc-a58_main_007.jpg?_ex=600x600" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+  <style>
+
+  /* === Kurakaji Unified Master Article Stylesheet === */
+
+  
+    /* Breadcrumbs Navigation */
+    .breadcrumb-nav {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .breadcrumb-nav a {
+      color: var(--color-brand-primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .breadcrumb-nav a:hover {
+      text-decoration: underline;
+    }
+    .breadcrumb-separator {
+      color: #94a3b8;
+    }
+
+    /* Rich Article Typography & Layout */
+    .article-container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 5rem;
+    }
+    .article-header {
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 2rem;
+    }
+    .article-tag {
+      display: inline-block;
+      padding: 0.35rem 0.9rem;
+      border-radius: var(--radius-full);
+      background-color: var(--color-brand-light);
+      color: var(--color-brand-primary);
+      font-size: 0.82rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(13, 148, 136, 0.2);
+    }
+    .article-h1 {
+      font-size: 1.95rem;
+      font-weight: 800;
+      line-height: 1.45;
+      color: var(--color-text-main);
+      margin-bottom: 1.2rem;
+    }
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .article-lead {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #334155;
+      background: #ffffff;
+      padding: 1.75rem;
+      border-radius: var(--radius-md);
+      border-left: 5px solid var(--color-brand-primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Buying Guide Section */
+    .guide-box {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin: 2.5rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .guide-box h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--color-brand-primary);
+      padding-bottom: 0.5rem;
+      color: var(--color-text-main);
+    }
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .guide-card {
+      background: #f8fafc;
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+    }
+    .guide-num {
+      display: inline-block;
+      font-family: var(--font-en);
+      font-weight: 900;
+      font-size: 1.3rem;
+      color: var(--color-brand-primary);
+      margin-bottom: 0.4rem;
+    }
+    .guide-card h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: var(--color-text-main);
+    }
+    .guide-card p {
+      font-size: 0.9rem;
+      color: #475569;
+      line-height: 1.65;
+    }
+
+    /* Comparison Table Section */
+    .compare-table-box {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin: 2.5rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .compare-table-box h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 1.25rem;
+      color: var(--color-text-main);
+      border-bottom: 2px solid var(--color-brand-primary);
+      padding-bottom: 0.5rem;
+    }
+    .table-responsive {
+      overflow-x: auto;
+    }
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+    .styled-table th {
+      background: #f1f5f9;
+      color: #1e293b;
+      padding: 0.75rem 1rem;
+      font-weight: 700;
+      border-bottom: 2px solid var(--color-border);
+      white-space: nowrap;
+    }
+    .styled-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--color-border);
+      color: #334155;
+    }
+    .styled-table tr.highlight {
+      background: #f0fdfa;
+      font-weight: 600;
+    }
+
+    /* TOC Box */
+    .toc-box {
+      background: #f8fafc;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+    }
+    .toc-title {
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--color-text-main);
+      margin-bottom: 0.75rem;
+    }
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .toc-list a {
+      color: #0369a1;
+      text-decoration: none;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .toc-list a:hover {
+      text-decoration: underline;
+      color: var(--color-brand-primary);
+    }
+
+    /* Product Ranking Cards */
+    .rank-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1.5px solid var(--color-border);
+      padding: 2.25rem;
+      margin-bottom: 3rem;
+      box-shadow: var(--shadow-sm);
+      scroll-margin-top: 5rem;
+    }
+    .rank-badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .rank-badge {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-en);
+      font-size: 1.35rem;
+      font-weight: 900;
+      background: #e2e8f0;
+      color: #334155;
+    }
+    .rank-badge.top1 {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #ffffff;
+      box-shadow: 0 4px 10px rgba(245, 158, 11, 0.35);
+    }
+    .rank-badge.top2 {
+      background: linear-gradient(135deg, #94a3b8, #64748b);
+      color: #ffffff;
+    }
+    .rank-badge.top3 {
+      background: linear-gradient(135deg, #b45309, #78350f);
+      color: #ffffff;
+    }
+    .rank-badge-label {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--color-brand-primary);
+    }
+    .rank-item-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      line-height: 1.45;
+      color: var(--color-text-main);
+      margin-bottom: 1.25rem;
+    }
+
+    /* 3-Images Responsive Gallery */
+    .rank-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .rank-gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: #f8fafc;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--color-border);
+      padding: 0.4rem;
+      transition: transform 0.2s;
+    }
+    .rank-gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Verification & Deep Review Box */
+    .deep-review-box {
+      background: #f8fafc;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .deep-review-box h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--color-text-main);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .deep-review-box p {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #334155;
+    }
+
+    /* Merits & Demerits Grid */
+    .pros-cons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .pros-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+    }
+    .pros-box h5 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #166534;
+      margin-bottom: 0.6rem;
+    }
+    .pros-box ul, .cons-box ul {
+      list-style: none;
+      font-size: 0.88rem;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+    .pros-box li::before {
+      content: "✔ ";
+      color: #16a34a;
+      font-weight: 800;
+    }
+    .cons-box {
+      background: #fff1f2;
+      border: 1px solid #fecdd3;
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+    }
+    .cons-box h5 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #9f1239;
+      margin-bottom: 0.6rem;
+    }
+    .cons-box li::before {
+      content: "▲ ";
+      color: #e11d48;
+      font-weight: 800;
+    }
+
+    /* User Voice Box */
+    .user-voice-box {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1rem 1.25rem;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: #1e3a8a;
+      margin-bottom: 1.5rem;
+    }
+
+    .specs-list {
+      list-style: none;
+      background: #f8fafc;
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-sm);
+      margin-bottom: 1.5rem;
+      font-size: 0.88rem;
+      color: #334155;
+    }
+    .specs-list li {
+      margin-bottom: 0.35rem;
+    }
+
+    .rank-cta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+    }
+    .rank-price {
+      font-size: 1.45rem;
+      font-weight: 900;
+      color: var(--color-cta);
+    }
+    .rank-cta-btn {
+      background: var(--color-cta);
+      color: #ffffff;
+      padding: 0.85rem 2rem;
+      border-radius: var(--radius-full);
+      font-weight: 800;
+      font-size: 0.98rem;
+      box-shadow: 0 4px 14px rgba(225, 29, 72, 0.28);
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+    }
+    .rank-cta-btn:hover {
+      background: var(--color-cta-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(225, 29, 72, 0.38);
+    }
+
+    /* FAQ Accordion Section */
+    .faq-box {
+      background: #ffffff;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin: 3.5rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .faq-box h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--color-brand-primary);
+      padding-bottom: 0.5rem;
+      color: var(--color-text-main);
+    }
+    .faq-item {
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--color-border);
+      padding-bottom: 1.25rem;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .faq-q {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--color-text-main);
+      margin-bottom: 0.5rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: baseline;
+    }
+    .faq-q span {
+      color: var(--color-brand-primary);
+      font-size: 1.2rem;
+    }
+    .faq-a {
+      font-size: 0.92rem;
+      color: #475569;
+      line-height: 1.7;
+      padding-left: 1.7rem;
+    }
+
+    @media (max-width: 640px) {
+      .article-h1 {
+        font-size: 1.45rem;
+      }
+      .rank-item-title {
+        font-size: 1.15rem;
+      }
+      .rank-card {
+        padding: 1.25rem;
+      }
+      .rank-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.4rem;
+      }
+      .rank-gallery img {
+        height: 100px;
+      }
+      .rank-cta-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+  
+
+  /* Responsive & Typography Harmonization */
+  .article-container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 5rem;
+  }
+  .article-header-section, .article-header {
+    margin-bottom: 2.25rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 1.75rem;
+  }
+  .category-tag, .article-tag {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-full);
+    background-color: var(--color-brand-light);
+    color: var(--color-brand-primary);
+    font-size: 0.8rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+    border: 1px solid rgba(13, 148, 136, 0.25);
+  }
+  .article-title, .article-h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    line-height: 1.45;
+    color: var(--color-text-main);
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+  }
+  .article-meta-info, .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.25rem;
+  }
+  .breadcrumb-trail, .breadcrumb-nav {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+  }
+  .breadcrumb-trail ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+  }
+  .breadcrumb-trail a, .breadcrumb-nav a {
+    color: var(--color-brand-primary);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .breadcrumb-trail a:hover, .breadcrumb-nav a:hover {
+    text-decoration: underline;
+  }
+  .breadcrumb-trail .sep, .breadcrumb-separator {
+    color: #94a3b8;
+  }
+  .breadcrumb-trail .current {
+    color: #64748b;
+  }
+
+  /* Guide Boxes & Content Cards */
+  .guide-box {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    margin: 2.5rem 0;
+    box-shadow: var(--shadow-sm);
+  }
+  .guide-box h2 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    border-bottom: 2px solid var(--color-brand-primary);
+    padding-bottom: 0.5rem;
+    color: var(--color-text-main);
+  }
+  .guide-box p {
+    font-size: 0.98rem;
+    line-height: 1.8;
+    color: #334155;
+    margin-bottom: 1.2rem;
+  }
+
+  /* Table styling */
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+  }
+  .comparison-table th, .comparison-table td {
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+
+  /* Product Ranking Cards Responsive Fix */
+  .ranking-card {
+    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    margin-bottom: 35px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  @media (max-width: 768px) {
+    .article-title, .article-h1 {
+      font-size: 1.45rem;
+      line-height: 1.4;
+    }
+    .article-container {
+      padding: 1.25rem 1rem 4rem;
+    }
+    .guide-box {
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .product-body {
+      flex-direction: column !important;
+      align-items: center !important;
+    }
+    .product-gallery {
+      width: 100% !important;
+      max-width: 260px !important;
+      margin: 0 auto 15px !important;
+    }
+    .product-details {
+      width: 100% !important;
+    }
+    .rank-header {
+      flex-direction: column;
+      align-items: flex-start !important;
+      gap: 10px;
+    }
+    .price-tag {
+      align-self: flex-start;
+    }
+    .product-item-card {
+      flex-direction: column !important;
+      align-items: center;
+      text-align: center;
+    }
+    .pillar-cta-card {
+      padding: 1.25rem !important;
+    }
+  }
+
+</style>
+
+  <!-- Schema.org Article Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://kurakaji.vercel.app/articles/cluster/single-life-breaker-trip-prevention.html#article",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://kurakaji.vercel.app/#website",
+      "name": "クラカジ",
+      "url": "https://kurakaji.vercel.app/"
+    },
+    "headline": "一人暮らしでブレーカーが落ちる原因と家電配置 | クラカジ",
+    "description": "電子レンジと電気ケトルを同時に使うと停電する理由とは？一人暮らし20A〜30Aのアンペア数制限を乗り切る家電のワット数計算と安全なコンセント配置術。",
+    "image": ["https://tshop.r10s.jp/fithome/cabinet/08657662/kjjs-demipro_01.jpg"],
+    "datePublished": "2026-11-12T19:00:00+09:00",
+    "dateModified": "2026-11-12T19:00:00+09:00",
+    "mainEntityOfPage": "https://kurakaji.vercel.app/articles/cluster/single-life-breaker-trip-prevention.html",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://kurakaji.vercel.app/#organization",
+      "name": "クラカジ 家電検証・編集チーム",
+      "url": "https://kurakaji.vercel.app/about.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://kurakaji.vercel.app/#organization",
+      "name": "クラカジ",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://kurakaji.vercel.app/favicon.svg"
+      }
+    },
+    "inLanguage": "ja",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".article-title", ".article-lead", ".guide-box p"]
+    }
+  }
+  </script>
+
+  <!-- Schema.org BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://kurakaji.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "家電・電気代コラム", "item": "https://kurakaji.vercel.app/#knowledge" },
+      { "@type": "ListItem", "position": 3, "name": "一人暮らしでブレーカーが落ちる原因と家電配置", "item": "https://kurakaji.vercel.app/articles/cluster/single-life-breaker-trip-prevention.html" }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{"@type": "Question", "name": "電子レンジとドライヤーを同時に使うとなぜブレーカーが落ちるのですか？", "acceptedAnswer": {"@type": "Answer", "text": "一人暮らしアパートの契約アンペア数は20A（合計2,000Wまで）が主流です。電子レンジ（約1,300W）とドライヤー（約1,200W）を同時に動かすと合計2,500Wに達し、一瞬でメインブレーカーが遮断されます。"}}, {"@type": "Question", "name": "ブレーカーを落とさないための簡単な対策は？", "acceptedAnswer": {"@type": "Answer", "text": "熱を発する高ワット家電（レンジ、ケトル、炊飯器、ドライヤー、ヒーター）は絶対に同時に2つ稼働させないこと。また、同じ壁面コンセントからタコ足配線で取らず、別系統のコンセントに分散させることが鉄則です。"}}]
+  }
+  </script>
+  <!-- Google Tag Manager / Analytics -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-P33SX8W6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+</head>
+<body>
+  
+  <header style="background: #fff; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100;">
+    <div style="max-width: 1100px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between;">
+      <a href="/" style="text-decoration: none; display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 1.35rem; font-weight: 900; color: #0f172a; letter-spacing: -0.02em;">クラカジ</span>
+        <span style="font-size: 0.72rem; background: #0284c7; color: #fff; padding: 2px 8px; border-radius: 9999px; font-weight: 700;">KURAKAJI</span>
+      </a>
+      <nav style="display: flex; gap: 16px; font-size: 0.88rem; font-weight: 600;">
+        <a href="/" style="color: #64748b; text-decoration: none;">ホーム</a>
+        <a href="/#editorial" style="color: #64748b; text-decoration: none;">暖房ガイド</a>
+        <a href="/#spring-guides" style="color: #64748b; text-decoration: none;">通年便利家電</a>
+        <a href="/#knowledge" style="color: #0284c7; text-decoration: none;">コラム</a>
+      </nav>
+    </div>
+  </header>
+
+<div class="article-lead" style="font-size: 1.05rem; line-height: 1.85; color: #334155; background: #f8fafc; border-left: 4px solid #0284c7; padding: 20px 24px; border-radius: 0 12px 12px 0; margin-bottom: 30px;">
+      「冬の寒い夜、エアコンと電子レンジを同時に使ったらバチン！と部屋が真っ暗に…」<br />一人暮らしの賃貸アパートで最も多いトラブルがこのブレーカー落ちです。多くの単身物件は【20A〜30A（2000W〜3000W）】で契約されているため、家電の消費電力を正しく把握していないと頻繁に停電します。冬家電のワット数マップと、ブレーカーを絶対に落とさない同時使用ルールを解説します。
+    </div>
+
+    
+        <section style="margin-bottom: 35px;">
+          <h2 style="font-size: 1.4rem; font-weight: 800; color: #0f172a; margin-bottom: 14px; border-left: 5px solid #0284c7; padding-left: 12px;">【要注意】冬の高消費電力家電ワット数ワースト一覧</h2>
+          <div style="background: #fff; border: 1.5px solid #e2e8f0; border-radius: 14px; padding: 20px 24px; margin: 18px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.93rem; color: #334155; line-height: 1.85;">
+                  <li><strong>電子レンジ（温め時）:</strong> 約1,000W〜1,400W ⚠️</li>
+                  <li><strong>電気ケトル（湯沸かし時）:</strong> 約1,200W〜1,300W ⚠️</li>
+                  <li><strong>ドライヤー（温風強）:</strong> 約1,200W ⚠️</li>
+                  <li><strong>セラミックファンヒーター:</strong> 約1,200W ⚠️</li>
+                  <li><strong>エアコン（暖房立ち上がり時）:</strong> 約900W〜1,400W ⚠️</li>
+                  <li><strong>炊飯器（炊飯時）:</strong> 約600W〜1,100W</li>
+                </ul>
+                <p style="font-size: 0.88rem; color: #dc2626; font-weight: 700; margin: 10px 0 0;">
+                  ⚠️ 上記の1,000W超え家電のうち、「どれか2つ」が同時に動いた瞬間に20Aブレーカーは即死（遮断）します。
+                </p>
+              </div>
+        </section>
+        
+        <section style="margin-bottom: 35px;">
+          <h2 style="font-size: 1.4rem; font-weight: 800; color: #0f172a; margin-bottom: 14px; border-left: 5px solid #0284c7; padding-left: 12px;">絶対にブレーカーを落とさない3大ルール</h2>
+          <ol style="margin: 0; padding-left: 22px; font-size: 0.95rem; color: #334155; line-height: 1.9;">
+                <li><strong>ケトルとお弁当の温めは絶対にズラす:</strong> 朝の忙しい時間、電子レンジで温めながらケトルでコーヒーのお湯を沸かすのは最大のNG。必ず片方が終わってからスイッチを入れましょう。</li>
+                <li><strong>ドライヤーを使う時はヒーターを弱にする:</strong> お風呂上がりに脱衣所でセラミックヒーターを強（1200W）にしたままドライヤー（1200W）を使うと、その回路だけで24Aになり一発で落ちます。</li>
+                <li><strong>超低消費電力の省エネ暖房を活用する:</strong> デスクワークや就寝時は、1200Wの温風ヒーターではなく、190Wのパネルヒーターや50Wの電気毛布に切り替えることで、アンペア数に圧倒的な余裕が生まれます。</li>
+              </ol>
+        </section>
+
+    <!-- FAQ Section -->
+    <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 16px; padding: 24px; margin: 3rem 0;">
+      <h3 style="font-size: 1.25rem; font-weight: 800; color: #0f172a; margin-bottom: 16px;">よくある質問（FAQ）</h3>
+      
+      <div style="margin-bottom: 16px;">
+        <h4 style="font-size: 1rem; font-weight: 800; color: #0284c7; margin-bottom: 6px;">Q. 電子レンジとドライヤーを同時に使うとなぜブレーカーが落ちるのですか？</h4>
+        <p style="font-size: 0.92rem; color: #334155; line-height: 1.7; margin: 0;">A. 一人暮らしアパートの契約アンペア数は20A（合計2,000Wまで）が主流です。電子レンジ（約1,300W）とドライヤー（約1,200W）を同時に動かすと合計2,500Wに達し、一瞬でメインブレーカーが遮断されます。</p>
+      </div>
+    
+      <div style="margin-bottom: 16px;">
+        <h4 style="font-size: 1rem; font-weight: 800; color: #0284c7; margin-bottom: 6px;">Q. ブレーカーを落とさないための簡単な対策は？</h4>
+        <p style="font-size: 0.92rem; color: #334155; line-height: 1.7; margin: 0;">A. 熱を発する高ワット家電（レンジ、ケトル、炊飯器、ドライヤー、ヒーター）は絶対に同時に2つ稼働させないこと。また、同じ壁面コンセントからタコ足配線で取らず、別系統のコンセントに分散させることが鉄則です。</p>
+      </div>
+    
+    </div>
+
+    
+    <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 16px; padding: 24px; margin-top: 40px;">
+      <div style="display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 250px;">
+          <h4 style="margin: 0 0 6px 0; font-size: 1.05rem; font-weight: 800; color: #0f172a;">記事執筆・検証：クラカジ 暮らしと家電検証チーム</h4>
+          <p style="margin: 0 0 10px 0; font-size: 0.85rem; color: #64748b; line-height: 1.6;">
+            一人暮らしの限られた居住空間やタイパ重視の共働き世帯に向けて、楽天市場の売れ筋動向・実機サイズ・消費電力を徹底分析。実用性の高い本当に後悔しない小型家電だけを厳選してご紹介しています。
+          </p>
+          <div style="font-size: 0.8rem; color: #0284c7; font-weight: 700;">
+            <a href="/about.html" style="color: inherit; text-decoration: none;">▶ クラカジの検証基準・編集方針について</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="article-footer-cta" style="margin-top: 45px; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: #fff; padding: 35px 25px; border-radius: 20px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+      <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 12px; color: #f8fafc;">暮らしをスマートにする家電選びをサポート</h3>
+      <p style="font-size: 0.92rem; color: #94a3b8; max-width: 600px; margin: 0 auto 22px; line-height: 1.7;">
+        クラカジでは、購入後の「置く場所がない」「結局使わない」を防ぐ実用重視のレビューをお届けしています。
+      </p>
+      <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+        <a href="/" style="background: #0284c7; color: #fff; padding: 12px 28px; border-radius: 9999px; text-decoration: none; font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px;">
+          トップページへ戻る
+        </a>
+      </div>
+    </div>
+    
+    
+    <div style="margin-top: 50px; padding: 28px 24px; background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+      <h3 style="font-size: 1.2rem; font-weight: 800; color: #0f172a; margin-top: 0; margin-bottom: 18px; display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-block; width: 4px; height: 18px; background: #0284c7; border-radius: 2px;"></span>
+        あわせて読みたい厳選ガイド（おすすめ4選）
+      </h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px;">
+        <a href="/articles/compact-futon-dryer-best10.html" style="background: #fff; border: 1px solid #cbd5e1; border-radius: 12px; padding: 16px; text-decoration: none; color: inherit; display: block; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <span style="color: #0284c7; font-size: 0.75rem; font-weight: 800; display: block; margin-bottom: 6px;">🔥 冬の快眠・ダニ退治</span>
+          <span style="font-weight: 700; font-size: 0.92rem; color: #0f172a; line-height: 1.5; display: block;">冷たい布団を一瞬でホカホカに！小型布団乾燥機TOP10</span>
+        </a>
+        <a href="/articles/circulator-clothes-drying-best7.html" style="background: #fff; border: 1px solid #cbd5e1; border-radius: 12px; padding: 16px; text-decoration: none; color: inherit; display: block; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <span style="color: #16a34a; font-size: 0.75rem; font-weight: 800; display: block; margin-bottom: 6px;">🌀 部屋干し・節電</span>
+          <span style="font-weight: 700; font-size: 0.92rem; color: #0f172a; line-height: 1.5; display: block;">部屋干し臭ゼロ！サーキュレーターおすすめTOP7</span>
+        </a>
+        <a href="/articles/cluster/winter-electricity-bill-saving-hacks.html" style="background: #fff; border: 1px solid #cbd5e1; border-radius: 12px; padding: 16px; text-decoration: none; color: inherit; display: block; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <span style="color: #d97706; font-size: 0.75rem; font-weight: 800; display: block; margin-bottom: 6px;">💡 節電マニュアル</span>
+          <span style="font-weight: 700; font-size: 0.92rem; color: #0f172a; line-height: 1.5; display: block;">冬の電気代を月1万円削る小型家電フル活用術</span>
+        </a>
+        <a href="/articles/cluster/single-life-appliances-regret-top5.html" style="background: #fff; border: 1px solid #cbd5e1; border-radius: 12px; padding: 16px; text-decoration: none; color: inherit; display: block; transition: all 0.2s ease; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <span style="color: #dc2626; font-size: 0.75rem; font-weight: 800; display: block; margin-bottom: 6px;">⚠️ 後悔防止</span>
+          <span style="font-weight: 700; font-size: 0.92rem; color: #0f172a; line-height: 1.5; display: block;">一人暮らしで買って後悔した家電ワースト5</span>
+        </a>
+      </div>
+    </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand-note">
+        <strong style="color: var(--color-text-main); font-size: 1.05rem;">クラカジ</strong>
+        <p style="margin-top: 0.4rem; color: var(--color-text-muted);">
+          暮らしをスマートにする小型家電・生活雑貨家電のセレクトカタログメディア。<br />
+          ※当サイトはアフィリエイト広告を利用して商品をご紹介しています。
+        </p>
+      </div>
+
+      <nav class="footer-nav" aria-label="フッターリンク">
+        <a href="/about.html">クラカジについて・編集部紹介</a>
+        <a href="/terms.html">利用規約</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+      </nav>
+
+      <div class="copyright">
+        &copy; 2026 クラカジ (Kurakaji) All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+  <aside class="floating-share-bar" aria-label="記事を共有" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; display: flex; gap: 10px; align-items: center; background: rgba(15,23,42,0.92); backdrop-filter: blur(8px); padding: 8px 14px; border-radius: 9999px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.15);">
+    <a href="https://bsky.app/intent/compose?text=%E3%82%AF%E3%83%A9%E3%82%AC%E3%82%B8%E3%81%AE%E8%A8%98%E4%BA%8B%E3%82%92%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%EF%BC%81" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #0085ff; color: #fff; text-decoration: none; font-size: 0.85rem; font-weight: 900;" title="Blueskyで共有">Bsky</a>
+    <a href="https://social-plugins.line.me/lineit/share?url=https%3A%2F%2Fkurakaji.vercel.app" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #06c755; color: #fff; text-decoration: none; font-size: 0.85rem; font-weight: 900;" title="LINEで送る">L</a>
+    <a href="https://b.hatena.ne.jp/entry/s/kurakaji.vercel.app" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #00a4de; color: #fff; text-decoration: none; font-size: 0.85rem; font-weight: 900;" title="はてなブックマークに追加">B!</a>
+  </aside>
+
+  
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const progressBar = document.createElement('div');
+  progressBar.id = 'reading-progress-bar';
+  progressBar.style.cssText = 'position:fixed;top:0;left:0;height:4px;background:linear-gradient(90deg,#0d9488,#f59e0b);width:0%;z-index:99999;transition:width 0.1s ease-out;';
+  document.body.appendChild(progressBar);
+
+  window.addEventListener('scroll', function() {
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (window.pageYOffset / totalHeight) * 100;
+    progressBar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+  });
+
+  const container = document.querySelector('.article-container');
+  if (container && !document.getElementById('auto-toc-box')) {
+    const headings = container.querySelectorAll('h2');
+    if (headings.length >= 3) {
+      const tocBox = document.createElement('nav');
+      tocBox.id = 'auto-toc-box';
+      tocBox.style.cssText = 'background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:14px;padding:20px 24px;margin:25px 0 35px;box-shadow:0 2px 8px rgba(0,0,0,0.03);';
+      let tocHtml = '<div style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;" id="toc-toggle-header">';
+      tocHtml += '<span style="font-weight:800;font-size:1.05rem;color:#0f172a;">📑 目次 [タップで開閉]</span>';
+      tocHtml += '<span id="toc-arrow" style="font-size:0.85rem;color:#64748b;">▼</span></div>';
+      tocHtml += '<ol id="toc-list" style="margin:14px 0 0;padding-left:22px;line-height:1.9;font-size:0.92rem;">';
+      headings.forEach((h, idx) => {
+        const id = h.id || 'section-' + (idx + 1);
+        h.id = id;
+        tocHtml += `<li><a href="#${id}" style="color:#0284c7;text-decoration:none;font-weight:600;">${h.textContent.trim()}</a></li>`;
+      });
+      tocHtml += '</ol>';
+      tocBox.innerHTML = tocHtml;
+      const lead = container.querySelector('.lead-box, .guide-box, header');
+      if (lead) lead.parentNode.insertBefore(tocBox, lead.nextSibling);
+
+      const toggleHeader = document.getElementById('toc-toggle-header');
+      const list = document.getElementById('toc-list');
+      const arrow = document.getElementById('toc-arrow');
+      toggleHeader.addEventListener('click', function() {
+        if (list.style.display === 'none') { list.style.display = 'block'; arrow.textContent = '▼'; }
+        else { list.style.display = 'none'; arrow.textContent = '▲'; }
+      });
+    }
+  }
+});
+</script>
+
+</body>
+</html>
+

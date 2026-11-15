@@ -1,0 +1,58 @@
+name: Auto Update Kurakaji Special Features
+
+on:
+  schedule:
+    # 毎日2時間おきに実行 (0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22時 UTC)
+    - cron: '0 */2 * * *'
+  workflow_dispatch: # 手動即時トリガー可能
+
+permissions:
+  contents: write
+
+jobs:
+  update-features:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Run Special Feature Updater
+        env:
+          PYTHONUNBUFFERED: "1"
+          RAKUTEN_APP_ID: ${{ secrets.RAKUTEN_APP_ID }}
+          RAKUTEN_ACCESS_KEY: ${{ secrets.RAKUTEN_ACCESS_KEY }}
+          RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/feature_updater.py
+
+      - name: Generate LLMs and IndexNow Payload
+        run: |
+          python scripts/generate_llms_and_indexnow.py
+          python scripts/submit_indexnow.py
+
+      - name: Commit and push updated features
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/special_features/ articles/ public/ scripts/indexnow_payload.json vite.config.js
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore(features): Auto update rankings, products and IndexNow ping [skip ci]"
+            git push origin main || git push
+          fi
+
