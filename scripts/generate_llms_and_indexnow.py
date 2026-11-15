@@ -1,6 +1,6 @@
 import os, glob, re, json, uuid
 
-BASE_DIR = '/home/antigravity/kurakaji'
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PUBLIC_DIR = os.path.join(BASE_DIR, 'public')
 os.makedirs(PUBLIC_DIR, exist_ok=True)
 
