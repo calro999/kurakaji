@@ -890,37 +890,20 @@ def re_render_all_hubs():
             data = json.load(f)
         render_hub_html(slug, data)
 
-def run_update_cycle():
-    """2時間おきの更新サイクル実行"""
-    print(f"=== 特集自動更新サイクル開始: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ===")
-    
-    # 1. 毎月1日/月初の新規ハブ増設チェック
-    check_and_create_monthly_hubs()
-
-    # 2. 既存ハブの中から更新対象を1〜2つ選定（ローテーション）
-    posted_cache = get_posted_cache()
-
-    now_month = datetime.now().month
-    current_month_slugs = [t["slug"] for t in SEASONAL_HUB_TEMPLATES.get(now_month, [])]
-    target_pool = list(set(ACTIVE_FEATURE_SLUGS + current_month_slugs))
-    
-    chosen_slug = random.choice(target_pool)
-    print(f"今回の追加対象特集: [{chosen_slug}]")
-
-    meta_info = find_meta_info(chosen_slug)
-    hub_data = get_or_create_hub_data(chosen_slug, meta_info)
+def update_single_hub(slug: str, posted_cache: List[str]) -> bool:
+    """指定したハブに楽天APIから最新商品を1件確実に取得・採点・追加"""
+    meta_info = find_meta_info(slug)
+    hub_data = get_or_create_hub_data(slug, meta_info)
     keywords = hub_data.get("keywords", ["小型家電"])
     keyword = random.choice(keywords)
-    print(f"検索キーワード: [{keyword}] (ジャンル: {hub_data.get('category')})")
+    print(f"[{slug}] 検索キーワード: [{keyword}] (ジャンル: {hub_data.get('category')})")
 
-    # 3. 楽天API直接取得
-    rakuten_items = fetch_rakuten_items(keyword, hits=20)
+    # 楽天API直接取得
+    rakuten_items = fetch_rakuten_items(keyword, hits=25)
     if not rakuten_items:
-        print("[WARN] 楽天APIから商品を取得できませんでした。全ハブを再レンダリングして終了します。")
-        re_render_all_hubs()
-        return
+        print(f"[WARN] 楽天APIから商品を取得できませんでした ({keyword})")
+        return False
 
-    # 4. 未掲載の商品を1〜2件選別
     existing_codes = set(hub_data.get("posted_codes", []) + [i.get("itemCode") for i in hub_data.get("items", [])])
     candidate = None
     for it in rakuten_items:
@@ -930,11 +913,18 @@ def run_update_cycle():
             break
 
     if not candidate:
-        print("[INFO] 全て掲載済みまたはキャッシュ重複のため、最新アイテムを更新モードで再取得")
+        # 重複回避が難しい場合は未掲載のものを最優先
+        for it in rakuten_items:
+            code = it.get("itemCode")
+            if code and code not in existing_codes:
+                candidate = it
+                break
+
+    if not candidate:
+        print(f"[INFO] [{slug}] 既存商品の上位レビューを更新")
         candidate = rakuten_items[0]
 
-    # 5. Gemini / AIによるエディトリアル生成
-    print(f"AIエディトリアル生成中: {candidate.get('itemName')[:30]}...")
+    # エディトリアル生成
     editorial = generate_product_editorial(
         raw_name=candidate.get("itemName", ""),
         caption=candidate.get("itemCaption", ""),
@@ -942,32 +932,58 @@ def run_update_cycle():
         category=hub_data.get("category", "小型家電"),
         rank_num=len(hub_data.get("items", [])) + 1
     )
-
     candidate.update(editorial)
-    print(f"生成完了: スコア {candidate.get('rate')}点 | {candidate.get('clean_name')} | キャッチ: {candidate.get('catchphrase')}")
+    print(f"  → 追加商品: {candidate.get('clean_name')} (スコア: {candidate.get('rate')}点 / {candidate.get('itemPrice'):,}円)")
 
-    # 6. ハブデータへ追加（重複除去しつつrate順ランキングに挿入）
     hub_items = [i for i in hub_data.get("items", []) if i.get("itemCode") != candidate.get("itemCode")]
     hub_items.append(candidate)
     hub_data["items"] = hub_items
-    
-    # 掲載コード記録
+
     if "posted_codes" not in hub_data:
         hub_data["posted_codes"] = []
     if candidate.get("itemCode") not in hub_data["posted_codes"]:
         hub_data["posted_codes"].append(candidate.get("itemCode"))
-    
-    save_hub_data(chosen_slug, hub_data)
 
-    # 7. 全特集HTMLの再レンダリング（新デザイン＆更新適用）
-    re_render_all_hubs()
+    save_hub_data(slug, hub_data)
 
-    # 8. キャッシュ保存
     if candidate.get("itemCode") not in posted_cache:
         posted_cache.append(candidate.get("itemCode"))
-        save_posted_cache(posted_cache)
 
-    print(f"=== 特集自動更新サイクル完了: {chosen_slug} に商品を追加しました ===")
+    return True
+
+def run_update_cycle():
+    """更新サイクル実行: 全アクティブ特集ハブに対して確実に1商品ずつ新規追加"""
+    print(f"=== 特集自動更新サイクル開始: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ===")
+    
+    # 1. 毎月1日/月初の新規ハブ増設チェック
+    check_and_create_monthly_hubs()
+
+    # 2. 全アクティブ特集＋今月ハブの全リストを取得
+    posted_cache = get_posted_cache()
+    now_month = datetime.now().month
+    current_month_slugs = [t["slug"] for t in SEASONAL_HUB_TEMPLATES.get(now_month, [])]
+    target_pool = sorted(list(set(ACTIVE_FEATURE_SLUGS + current_month_slugs)))
+    
+    print(f"全対象特集 ({len(target_pool)}記事): {target_pool}")
+
+    updated_count = 0
+    for slug in target_pool:
+        try:
+            success = update_single_hub(slug, posted_cache)
+            if success:
+                updated_count += 1
+            # 楽天API負荷軽減のための小休止
+            time.sleep(1)
+        except Exception as e:
+            print(f"[ERROR] {slug} 更新中にエラー発生: {e}")
+
+    # 3. キャッシュ保存
+    save_posted_cache(posted_cache)
+
+    # 4. 全特集HTMLの再レンダリング（新商品・ランキング順・デザイン適用）
+    re_render_all_hubs()
+
+    print(f"=== 特集自動更新サイクル完了: 全{len(target_pool)}記事中 {updated_count}記事に新商品を追加・全ページ再構築しました ===")
 
 if __name__ == "__main__":
     if "--re-render-all" in sys.argv:
