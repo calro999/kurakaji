@@ -319,8 +319,8 @@ def get_or_create_hub_data(slug: str, meta_info: Dict[str, Any]) -> Dict[str, An
 def save_hub_data(slug: str, data: Dict[str, Any]):
     file_path = os.path.join(DATA_DIR, f"{slug}.json")
     data["updated_at"] = datetime.now().strftime("%Y-%m-%d %H:%M")
-    # rate順に自動ソート（高い順でランキング形成）
-    data["items"] = sorted(data["items"], key=lambda x: x.get("rate", 0), reverse=True)
+    # rate順に自動ソート（高い順でランキング形成）し、厳選TOP15にキャップして高品質維持
+    data["items"] = sorted(data["items"], key=lambda x: x.get("rate", 0), reverse=True)[:15]
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
