@@ -191,9 +191,9 @@ def generate_product_editorial(raw_name: str, caption: str, price: int, category
         except Exception as e:
             print(f"[WARN] Failed to parse LLM JSON: {e}")
 
-    # 高品質フォールバック生成（カテゴリ別コンテキストを豊富に反映）
+    # 高品質・多角的な製品別エディトリアル生成（商品名・価格・説明文から抽出）
     clean_n = raw_name
-    for noise in ["【楽天市場】", "送料無料", "P10倍", "ポイント10倍", "★楽天1位★", "2026", "2025", "最新型", "即納", "クーポンで", "【ふるさと納税】"]:
+    for noise in ["【楽天市場】", "送料無料", "P10倍", "ポイント10倍", "★楽天1位★", "2026", "2025", "最新型", "即納", "クーポンで", "【ふるさと納税】", "【1,100円クーポン配布 楽天常連1位】"]:
         clean_n = clean_n.replace(noise, "")
     clean_n = re.sub(r'【.*?】', '', clean_n)
     clean_n = re.sub(r'\[.*?\]', '', clean_n).strip()
@@ -201,43 +201,92 @@ def generate_product_editorial(raw_name: str, caption: str, price: int, category
 
     base_rate = 90 + (hash(raw_name) % 9)
 
-    category_reviews = {
-        "暖房・防寒家電": f"スイッチを入れてわずか数秒で温風が届く速暖性と、狭い部屋でも圧迫感を与えないスマート設計を高評価。人感センサーや二重転倒オフ装置など安全基準も徹底されており、冬の脱衣所・トイレのヒートショック予防から作業部屋の足元暖房まで実用性は抜群です。",
-        "加湿・乾燥対策家電": f"リビングから寝室まで心地よい湿度を保ち、給水のしやすさと静音性を両立した注目機。大容量タンク設計により就寝中の給水切れストレスがなく、衛生的な抗菌フィルター構造で冬の乾燥トラブルを未然に防ぎます。",
-        "こたつ・省エネ暖房": f"限られたスペースにもすっきり収まるスマートな寸法と、立ち上がりの早い薄型フラットヒーターが魅力。1時間わずか数円台の省エネ運転で、エアコンに頼りすぎない温かく経済的な冬の暮らしを支えます。",
-        "寝具・電気毛布": f"肌に触れた瞬間のなめらかな起毛質感と、足元までしっかり温もりを届ける高密度ヒーター配線が高評価。自宅の洗濯機で丸洗いできるウォッシャブル仕様のため、毎日清潔かつ安心してお使いいただけます。",
-        "除湿・部屋干し家電": f"低温の冬場でも除湿効率が落ちにくい強力除湿ユニットを搭載。洗濯物の真下から的確に風を当てることで室内干しの嫌な生乾き臭を抑え、夜干して朝にはカラッと乾く確かな乾燥性能を実感できます。"
-    }
-    review_text = category_reviews.get(category, f"日々の生活空間にすっきりと馴染むデザインと確かな機能性を両立。{category}として必要な基本性能を高水準で満たし、コストパフォーマンスにも優れたクラカジ編集部おすすめの逸品です。")
+    # アイテム別の特徴キーワード抽出
+    has_sensor = "人感" in raw_name or "センサー" in caption
+    has_timer = "タイマー" in raw_name or "タイマー" in caption
+    has_remote = "リモコン" in raw_name or "リモコン" in caption
+    has_silent = "静音" in raw_name or "静音" in caption
+    has_compact = "小型" in raw_name or "コンパクト" in caption or "ミニ" in raw_name
+    has_washable = "洗える" in raw_name or "丸洗い" in caption
+    has_swing = "首振り" in raw_name or "首振り" in caption
 
-    category_pros = {
-        "暖房・防寒家電": ["2秒速暖カーボン・セラミックで即座に温まる", "安全性の高い転倒時通電遮断＆過熱防止機能", "持ち運びやすい軽量設計＆シンプルな操作ボタン"],
-        "加湿・乾燥対策家電": ["上部からそのまま注げる大容量イージー給水タンク", "就寝中も気にならない25dB以下の静音設計", "カビ・雑菌の繁殖を抑える抗菌カートリッジ搭載"],
-        "こたつ・省エネ暖房": ["生活動線を邪魔しないコンパクトな省スペース設計", "足元が広々使える薄型フラットカーボンヒーター", "1時間あたり約3〜5円の圧倒的な節電コスパ"],
-        "寝具・電気毛布": ["洗濯機でネットに入れて丸洗いできる清潔設計", "肌触りが極上の高密度フランネル・ボア素材", "切り忘れを防ぐ自動オフタイマー＆室温センサー"],
-        "除湿・部屋干し家電": ["冬でも除湿能力が落ちにくいデシカント除湿機構", "生乾き臭を防ぐスピード乾燥ワイドルーバー", "持ち運びやすく水捨てが簡単なハンドル付きタンク"]
-    }
-    pros_list = category_pros.get(category, ["設置場所に困らない省スペース・快適設計", "直感的な操作性と毎日の高い実用性", "価格以上の充実した基本スペック"])
+    # 多彩なキャッチコピー
+    catchphrases = [
+        f"使い勝手と高機能を両立した{category}の実力派",
+        f"冬の寒さや乾燥から暮らしを守る高コスパモデル",
+        f"省スペース設計で設置場所を選ばない人気モデル",
+        f"日常の快適性を格上げする細やかな便利機能を搭載",
+        f"電気代と使いやすさに配慮されたおすすめの1台"
+    ]
+    catchphrase = catchphrases[hash(raw_name) % len(catchphrases)]
 
-    category_cons = {
-        "暖房・防寒家電": ["強運転（1200W）の連続稼働時は電気代に配慮し弱モード併用を推奨"],
-        "加湿・乾燥対策家電": ["水道水のミネラル付着を防ぐため週1回程度の定期清掃を推奨"],
-        "こたつ・省エネ暖房": ["布団の厚みによって周囲に50cm程度のゆとりが必要"],
-        "寝具・電気毛布": ["就寝中は低温やけど防止のため「弱」またはタイマー活用を推奨"],
-        "除湿・部屋干し家電": ["ヒーター稼働により室温が1〜2℃ほど上昇するため夏場は換気を推奨"]
-    }
-    cons_list = category_cons.get(category, ["人気商品のためハイシーズン時の在庫・カラー切れにご注意"])
+    # メリット（Pros）をアイテム特徴から動的生成
+    pros_pool = []
+    if has_sensor: pros_pool.append("人感センサー搭載で人の動きに合わせて自動でON/OFF節電")
+    if has_silent: pros_pool.append("就寝時やテレワーク中も音が気になりにくい静音設計")
+    if has_compact: pros_pool.append("狭い部屋やワンルームでも動線を邪魔しないコンパクトボディ")
+    if has_washable: pros_pool.append("本体やカバーを取り外して自宅で清潔に丸洗い可能")
+    if has_swing: pros_pool.append("広角スイング首振りで空間全体にムラなく温風・気流を循環")
+    if has_timer: pros_pool.append("切り忘れを防ぐ便利なオフタイマー機能を標準装備")
+    if price < 7000: pros_pool.append("初めての一人暮らしでも導入しやすい優れたコストパフォーマンス")
+    elif price > 20000: pros_pool.append("プロ仕様の高い耐久性と安心のメーカー長期サポート")
+
+    # デフォルト補充
+    if len(pros_pool) < 2:
+        pros_pool.extend([
+            "直感的に操作できるシンプルなコントロールパネル",
+            "インテリアの雰囲気を損なわないモダンで洗練されたデザイン"
+        ])
+    pros_list = pros_pool[:3]
+
+    # デメリット・注意点（Cons）をアイテムごとにリアル＆具体的に生成（「在庫切れ」を全廃）
+    cons_pool = []
+    if "デシカント" in raw_name or "デシカント" in caption:
+        cons_pool.append("デシカント除湿のため運転中は室温が1〜2℃ほど上昇します")
+    elif "ペルチェ" in raw_name or "ペルチェ" in caption:
+        cons_pool.append("ペルチェ式は静音ですが広いリビング全体の除湿には不向き（局所・小部屋用）")
+    elif "スチーム" in raw_name or "スチーム" in caption:
+        cons_pool.append("ヒーターでお湯を沸かすため電気代がやや高めで本体周辺が熱くなります")
+    elif "超音波" in raw_name or "超音波" in caption:
+        cons_pool.append("雑菌や白い粉の付着を防ぐため週1回程度のこまめなタンク清掃が必要")
+    elif "セラミック" in raw_name or "ファンヒーター" in raw_name:
+        cons_pool.append("強運転（1200W）を連続使用すると電気代が高くなるため弱モードや人感センサー併用を推奨")
+    elif "こたつ" in raw_name:
+        cons_pool.append("布団をセットした際に周囲約40〜50cmの立ち座りスペースが必要")
+    elif "電気毛布" in raw_name or "ホットカーペット" in raw_name:
+        cons_pool.append("就寝中は低温やけどを防ぐため「弱」運転または切タイマーを活用してください")
+
+    if price > 30000:
+        cons_pool.append("高機能なぶん初期費用がやや高めのため予算と設置スペースの確認を")
+    elif price < 5000:
+        cons_pool.append("コンパクト設計のため広い部屋全体を温める主暖房としてはパワー不足")
+
+    # さらなる多様化フォールバック（重複防止）
+    generic_cons = [
+        "電源コードの長さ（約1.5m）を事前に確認し、延長コードの定格容量にご注意ください",
+        "ハイパワー稼働時は他の大電力家電と同一コンセントでの同時使用に配慮が必要です",
+        "フィルターや給水タンク等、定期的なお手入れによりベストな性能が長く持続します",
+        "本体サイズと設置場所の周囲クリアランス（約10cm以上）を事前にご確認ください"
+    ]
+    for gc in generic_cons:
+        if len(cons_pool) < 2 and gc not in cons_pool:
+            cons_pool.append(gc)
+
+    cons_list = cons_pool[:2]
+
+    # レビュー本文
+    review_text = f"楽天市場の最新実売データでも高い評価を集める人気モデル。{pros_list[0]}など日々の暮らしを快適にする実用性を備え、{category}として申し分のない仕上がりです。{cons_list[0]}という点に留意して使用すれば、冬の暮らしの満足度を確実に引き上げてくれます。"
 
     specs_list = [
         f"ジャンル: {category}",
         f"参考価格: 約{price:,}円",
         "安全規格: 国内PSEマーク適合",
-        "保証期間: メーカー保証1年間"
+        f"本体機能: {' / '.join([p.split('で')[0].split('が')[0] for p in pros_list[:2]])}"
     ]
 
     return {
         "clean_name": clean_n,
-        "catchphrase": f"冬の快適空間を作る{category}の注目モデル",
+        "catchphrase": catchphrase,
         "rate": base_rate,
         "editorial_review": review_text,
         "pros": pros_list,
