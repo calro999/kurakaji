@@ -9,7 +9,7 @@
     "脱衣所 ヒーター ヒートショック対策"
   ],
   "created_at": "2026-11-15 09:17",
-  "updated_at": "2026-11-16 00:47",
+  "updated_at": "2026-11-16 09:03",
   "items": [
     {
       "itemCode": "irisplaza-r:10141596",
@@ -42,6 +42,39 @@
         "参考価格: 約5,478円",
         "安全規格: 国内PSEマーク適合",
         "本体機能: 人感センサー搭載 / 狭い部屋やワンルーム"
+      ]
+    },
+    {
+      "itemCode": "ichibankanshop:10482731",
+      "itemName": "ヒーター 電気ストーブ カーボンヒーター 首振り 速暖 遠赤外線 転倒自動OFF 省エネ 簡単操作 足元暖房 電気ヒーター 赤外線ヒーター 足元ヒーター 首ふり 静音 あったか 暖かい 暖房器具",
+      "itemPrice": 6480,
+      "itemCaption": "・換気不要でお部屋の空気を汚しません。 ・瞬間速暖、スイッチ入れたらすぐ暖かい! ・体の芯まで暖まって、ポカポカ持続。 ・首振り機能で暖かさ広がる ・安全性に優れるメタルボディー ・ガードネット取り外し可能でお手入れラクラク ・転倒OFFスイッチ ・安心の温度過昇防止装置 消費電力 900W/450W 切替式 電気代 約24.3円/時（900W時） サイズ 幅34.0×奥行き23.5×高さ64.5cm 本体質量 3.85kg コードの長さ 約1.8m 安全装置 転倒OFF機能 ▼ こちらのあったかグッズもおすすめです ▼ ヒートブランケット ヒートジャケット 充電式カイロ",
+      "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00q660n.j9rug107.g00q660n.j9ruh0d6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fichibankanshop%2Fchm-4531%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fichibankanshop%2Fi%2F10482731%2F&rafcid=wsc_i_is_4b79f26f-f12a-4720-88b2-c3705cd31fa3",
+      "reviewCount": 1239,
+      "reviewAverage": 4.54,
+      "images": [
+        "https://thumbnail.image.rakuten.co.jp/@0_mall/ichibankanshop/cabinet/item0/chm-4531-01.jpg",
+        "https://thumbnail.image.rakuten.co.jp/@0_mall/ichibankanshop/cabinet/ranking/chm-453_rank.jpg",
+        "https://thumbnail.image.rakuten.co.jp/@0_mall/ichibankanshop/cabinet/item64/chm-4531-n02.jpg"
+      ],
+      "clean_name": "ヒーター 電気ストーブ カーボンヒーター 首振り 速暖 遠赤",
+      "catchphrase": "省スペース設計で設置場所を選ばない人気モデル",
+      "rate": 96,
+      "editorial_review": "楽天市場の最新実売データでも高い評価を集める人気モデル。就寝時やテレワーク中も音が気になりにくい静音設計など日々の暮らしを快適にする実用性を備え、暖房・防寒家電として申し分のない仕上がりです。電源コードの長さ（約1.5m）を事前に確認し、延長コードの定格容量にご注意くださいという点に留意して使用すれば、冬の暮らしの満足度を確実に引き上げてくれます。",
+      "pros": [
+        "就寝時やテレワーク中も音が気になりにくい静音設計",
+        "広角スイング首振りで空間全体にムラなく温風・気流を循環",
+        "初めての一人暮らしでも導入しやすい優れたコストパフォーマンス"
+      ],
+      "cons": [
+        "電源コードの長さ（約1.5m）を事前に確認し、延長コードの定格容量にご注意ください",
+        "ハイパワー稼働時は他の大電力家電と同一コンセントでの同時使用に配慮が必要です"
+      ],
+      "specs": [
+        "ジャンル: 暖房・防寒家電",
+        "参考価格: 約6,480円",
+        "安全規格: 国内PSEマーク適合",
+        "本体機能: 就寝時やテレワーク中も音 / 広角スイング首振り"
       ]
     },
     {
@@ -214,6 +247,7 @@
     "e-kurashi:10026585",
     "yangzi81:10000345",
     "brain556:10005912",
-    "lworld:10000015"
+    "lworld:10000015",
+    "ichibankanshop:10482731"
   ]
 }
