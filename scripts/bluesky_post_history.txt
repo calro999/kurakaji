@@ -11,3 +11,5 @@ https://kurakaji.vercel.app/articles/cluster/dehumidifier-vs-ac-dry-cost.html
 【プロ厳選】除湿機 vs エアコン除湿！電気代と乾燥速度比較
 trivia_airfryer_healthy
 【揚げ物好きの一人暮らしは全員ノンフライヤー買うべき】
+trivia_room_drying
+【雨の日の部屋干し臭を100%防ぐ干し方】
