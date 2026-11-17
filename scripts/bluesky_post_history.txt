@@ -13,3 +13,5 @@ trivia_airfryer_healthy
 【揚げ物好きの一人暮らしは全員ノンフライヤー買うべき】
 trivia_room_drying
 【雨の日の部屋干し臭を100%防ぐ干し方】
+trivia_kotatsu_saving
+【一人暮らし最強の冬暖房は『着るこたつ』】
