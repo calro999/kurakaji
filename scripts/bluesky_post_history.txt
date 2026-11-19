@@ -29,3 +29,5 @@ trivia_airfryer_healthy
 【揚げ物好きの一人暮らしは全員ノンフライヤー買うべき】
 trivia_futon_dani
 【天日干しではダニは死なない事実】
+trivia_humidifier_placement
+【加湿器を窓際や床に直置きしてはいけない理由】
