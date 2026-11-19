@@ -436,7 +436,7 @@ def render_hub_html(slug: str, data: Dict[str, Any]):
               <ul>{pros_html}</ul>
             </div>
             <div class="cons-box">
-              <h5>気になる不安・疑問をプロが先回り解消</h5>
+              <h5>購入前に知っておきたいポイント</h5>
               <ul>{cons_html}</ul>
             </div>
           </div>
