@@ -9,7 +9,7 @@
     "脱衣所 ヒーター ヒートショック対策"
   ],
   "created_at": "2026-11-15 09:17",
-  "updated_at": "2026-11-19 02:20",
+  "updated_at": "2026-11-20 02:03",
   "items": [
     {
       "itemCode": "irisplaza-r:10141596",
@@ -42,6 +42,39 @@
         "参考価格: 約5,478円",
         "安全規格: 国内PSEマーク適合",
         "本体機能: 人感センサー搭載 / 狭い部屋やワンルーム"
+      ]
+    },
+    {
+      "itemCode": "jyousui:10003611",
+      "itemName": "【あす楽】 SDG-1200GSM 高須産業（TSK） 涼風暖房機 (壁面取付タイプ/脱衣所/トイレ用） 非防水仕様※SDG-1200GSの後継機種 脱衣所の暖房機【ヒートショック防止 予防 ヒーターとして】【 ヒートショック対策として 脱衣所の暖房機 暖房器具 家電】",
+      "itemPrice": 45400,
+      "itemCaption": "SDG-1200GSM 涼風暖房機（防水仕様ではありません） メーカー希望小売価格はメーカーサイトに基づいて掲載しています脱衣所の暖房機【ヒートショック防止 予防 ヒーターとして】【 ヒートショック対策として 脱衣所の暖房機 暖房器具 家電】",
+      "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00qdvon.j9rug4d8.g00qdvon.j9ruheb3/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fjyousui%2Fsdg1200gsm_01%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fjyousui%2Fi%2F10003611%2F&rafcid=wsc_i_is_4b79f26f-f12a-4720-88b2-c3705cd31fa3",
+      "reviewCount": 29,
+      "reviewAverage": 4.66,
+      "images": [
+        "https://thumbnail.image.rakuten.co.jp/@0_mall/jyousui/cabinet/shouhin/heater/sdg1200m/sdg1200gsm_rk.jpg",
+        "https://thumbnail.image.rakuten.co.jp/@0_mall/jyousui/cabinet/sozai/tmb_img/favo-tel_tmb_rk02.jpg",
+        "https://thumbnail.image.rakuten.co.jp/@0_mall/jyousui/cabinet/sh-img/asuraku300.jpg"
+      ],
+      "clean_name": "SDG-1200GSM 高須産業（TSK） 涼風暖房機 (壁",
+      "catchphrase": "使い勝手と高機能を両立した暖房・防寒家電の実力派",
+      "rate": 97,
+      "editorial_review": "楽天市場の最新実売データでも高い評価を集める人気モデル。プロ仕様の高い耐久性と安心のメーカー長期サポートなど日々の暮らしを快適にする実用性を備え、暖房・防寒家電として申し分のない仕上がりです。高機能なぶん初期費用がやや高めのため予算と設置スペースの確認をという点に留意して使用すれば、冬の暮らしの満足度を確実に引き上げてくれます。",
+      "pros": [
+        "プロ仕様の高い耐久性と安心のメーカー長期サポート",
+        "直感的に操作できるシンプルなコントロールパネル",
+        "インテリアの雰囲気を損なわないモダンで洗練されたデザイン"
+      ],
+      "cons": [
+        "高機能なぶん初期費用がやや高めのため予算と設置スペースの確認を",
+        "電源コードの長さ（約1.5m）を事前に確認し、延長コードの定格容量にご注意ください"
+      ],
+      "specs": [
+        "ジャンル: 暖房・防寒家電",
+        "参考価格: 約45,400円",
+        "安全規格: 国内PSEマーク適合",
+        "本体機能: プロ仕様の高い耐久性と安心のメーカー長期サポート / 直感的に操作"
       ]
     },
     {
@@ -349,6 +382,7 @@
     "ichibankanshop:10482731",
     "dondon:10004204",
     "insair:10044169",
-    "ait01:10001399"
+    "ait01:10001399",
+    "jyousui:10003611"
   ]
 }

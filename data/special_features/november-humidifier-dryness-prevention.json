@@ -9,7 +9,7 @@
     "アロマ加湿器 小型 寝室"
   ],
   "created_at": "2026-11-15 09:17",
-  "updated_at": "2026-11-19 02:19",
+  "updated_at": "2026-11-20 02:03",
   "items": [
     {
       "itemCode": "dondon:10004199",
@@ -242,6 +242,38 @@
       ]
     },
     {
+      "itemCode": "shinetourmarket:10000278",
+      "itemName": "【COUPONで18,980円～】加湿器 大容量 20L 業務用 ハイブリッド式 大型 オフィス Lacidoll 加湿器 ラシドール 加熱式 スチーム式 超音波加湿器 上から給水 お手入れ簡単 タワー型 100℃高温 加熱 加湿 静音 アロマ対応 床置き 寝室 リビング 加湿 器30畳 敬老の日",
+      "itemPrice": 25980,
+      "itemCaption": "メーカー希望小売価格はメーカー商品タグに基づいて掲載しています メーカー希望小売価格はメーカー商品タグに基づいて掲載していますPSE マークあり 届出事業者名：株式会社成洋 登録検査機関名：Shenzhen HUAK Testing Technology Co., Ltd.",
+      "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00tu9un.j9rugc71.g00tu9un.j9ruh114/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fshinetourmarket%2Flcd-jsq2301j%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fshinetourmarket%2Fi%2F10000278%2F&rafcid=wsc_i_is_4b79f26f-f12a-4720-88b2-c3705cd31fa3",
+      "reviewCount": 42,
+      "reviewAverage": 4.55,
+      "images": [
+        "https://thumbnail.image.rakuten.co.jp/@0_mall/shinetourmarket/cabinet/11156881/11188728/imgrc0140235187.jpg",
+        "https://thumbnail.image.rakuten.co.jp/@0_mall/shinetourmarket/cabinet/11075713/12691041/imgrc0127642899.jpg",
+        "https://thumbnail.image.rakuten.co.jp/@0_mall/shinetourmarket/cabinet/11075713/12402328/12402331/imgrc0125427913.jpg"
+      ],
+      "clean_name": "加湿器 大容量 20L 業務用 ハイブリッド式 大型 オフィ",
+      "catchphrase": "使い勝手と高機能を両立した加湿・乾燥対策家電の実力派",
+      "rate": 92,
+      "editorial_review": "楽天市場の最新実売データでも高い評価を集める人気モデル。就寝時やテレワーク中も音が気になりにくい静音設計など日々の暮らしを快適にする実用性を備え、加湿・乾燥対策家電として申し分のない仕上がりです。ヒーターでお湯を沸かすため電気代がやや高めで本体周辺が熱くなりますという点に留意して使用すれば、冬の暮らしの満足度を確実に引き上げてくれます。",
+      "pros": [
+        "就寝時やテレワーク中も音が気になりにくい静音設計",
+        "プロ仕様の高い耐久性と安心のメーカー長期サポート"
+      ],
+      "cons": [
+        "ヒーターでお湯を沸かすため電気代がやや高めで本体周辺が熱くなります",
+        "電源コードの長さ（約1.5m）を事前に確認し、延長コードの定格容量にご注意ください"
+      ],
+      "specs": [
+        "ジャンル: 加湿・乾燥対策家電",
+        "参考価格: 約25,980円",
+        "安全規格: 国内PSEマーク適合",
+        "本体機能: 就寝時やテレワーク中も音 / プロ仕様の高い耐久性と安心のメーカー長期サポート"
+      ]
+    },
+    {
       "itemCode": "tokyopt:10000012",
       "itemName": "【クーポンで1,980円～】 楽天1位 加湿器 コードレス 卓上 小型 大容量 超音波加湿器 350ml 除菌 超音波式 卓上加湿器 ミスト 次亜塩素酸水対応 持ち運び 静音設計 USB 充電式 空焚き防止 7色LED お手入れ簡単 車載/寝室/オフィス用 ポータブル 持ち運び",
       "itemPrice": 2380,
@@ -317,6 +349,7 @@
     "hitidear:10000171",
     "aibeaute:10000907",
     "dondon:10004199",
-    "aooka:10000759"
+    "aooka:10000759",
+    "shinetourmarket:10000278"
   ]
 }
