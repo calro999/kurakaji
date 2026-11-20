@@ -33,3 +33,6 @@ trivia_humidifier_placement
 【加湿器を窓際や床に直置きしてはいけない理由】
 trivia_humidifier_placement
 【加湿器を窓際や床に直置きしてはいけない理由】
+https://kurakaji.vercel.app/articles/cluster/electric-blanket-vs-panel-heater.html
+/home/runner/work/kurakaji/kurakaji/articles/cluster/electric-blanket-vs-panel-heater.html
+【プロ厳選】電気毛布vsパネルヒーター！デスク電気代比較
