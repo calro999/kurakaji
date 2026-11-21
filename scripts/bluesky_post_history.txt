@@ -39,3 +39,6 @@ https://kurakaji.vercel.app/articles/cluster/electric-blanket-vs-panel-heater.ht
 https://kurakaji.vercel.app/articles/wearable-blanket-rechargeable-warmer-best10.html
 /home/runner/work/kurakaji/kurakaji/articles/wearable-blanket-rechargeable-warmer-best10.html
 【プロ厳選】着る毛布＆カイロ！電気代1日1円暖房TOP10
+https://kurakaji.vercel.app/articles/cluster/kotatsu-electricity-cost.html
+/home/runner/work/kurakaji/kurakaji/articles/cluster/kotatsu-electricity-cost.html
+【プロ厳選】一人用こたつの電気代！エアコン併用節電術
