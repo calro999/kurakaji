@@ -9,7 +9,7 @@
     "電気毛布 省エネ タイマー付"
   ],
   "created_at": "2026-11-15 09:17",
-  "updated_at": "2026-11-21 09:35",
+  "updated_at": "2026-11-22 00:59",
   "items": [
     {
       "itemCode": "homeycozy:10000882",
@@ -339,6 +339,39 @@
       ]
     },
     {
+      "itemCode": "ffws:10017671",
+      "itemName": "【10%OFFクーポン対象！】着る毛布 電気毛布 ブランケット 着る電気毛布 curun クルン アーバンスタイル ノルディックスタイル 140x140cm レギュラーサイズ 電気ブランケット 電気ひざ掛け あったか 北欧 洗濯 洗える 柔らか 日本製 着る電気毛布",
+      "itemPrice": 15900,
+      "itemCaption": "＞レギュラーサイズ ＞ロングサイズ クルン ＞レギュラーサイズ&emsp;140x140cm&emsp;&emsp; ＞ロングサイズ&emsp;140x180cm",
+      "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00qntmn.j9rug884.g00qntmn.j9ruhf3e/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fffws%2F33300017%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fffws%2Fi%2F10017671%2F&rafcid=wsc_i_is_4b79f26f-f12a-4720-88b2-c3705cd31fa3",
+      "reviewCount": 362,
+      "reviewAverage": 4.41,
+      "images": [
+        "https://thumbnail.image.rakuten.co.jp/@0_mall/ffws/cabinet/mbimg-ib/333-3/33300017_m_2.jpg",
+        "https://thumbnail.image.rakuten.co.jp/@0_mall/ffws/cabinet/mbimg-ib/333-3/33300017_m_1.jpg",
+        "https://thumbnail.image.rakuten.co.jp/@0_mall/ffws/cabinet/mbimg-ib/333-3/33300017_m_4.jpg"
+      ],
+      "clean_name": "着る毛布 電気毛布 ブランケット 着る電気毛布 curun ",
+      "catchphrase": "使い勝手と高機能を両立した寝具・電気毛布の実力派",
+      "rate": 92,
+      "editorial_review": "楽天市場の最新実売データでも高い評価を集める人気モデル。本体やカバーを取り外して自宅で清潔に丸洗い可能など日々の暮らしを快適にする実用性を備え、寝具・電気毛布として申し分のない仕上がりです。就寝中は低温やけどを防ぐため「弱」運転または切タイマーを活用してくださいという点に留意して使用すれば、冬の暮らしの満足度を確実に引き上げてくれます。",
+      "pros": [
+        "本体やカバーを取り外して自宅で清潔に丸洗い可能",
+        "直感的に操作できるシンプルなコントロールパネル",
+        "インテリアの雰囲気を損なわないモダンで洗練されたデザイン"
+      ],
+      "cons": [
+        "就寝中は低温やけどを防ぐため「弱」運転または切タイマーを活用してください",
+        "電源コードの長さ（約1.5m）を事前に確認し、延長コードの定格容量にご注意ください"
+      ],
+      "specs": [
+        "ジャンル: 寝具・電気毛布",
+        "参考価格: 約15,900円",
+        "安全規格: 国内PSEマーク適合",
+        "本体機能: 本体やカバーを取り外して自宅 / 直感的に操作"
+      ]
+    },
+    {
       "itemCode": "sugibou:10000045",
       "itemName": "【セット買いがお得】2年保証付き　電気掛敷兼用毛布　日本製　送料無料　タイマー付き　洗える　自動オフ　切り忘れ防止　丸洗い　オフタイマー　ダニ退治　電気毛布　掛け敷き　掛け　敷き　電気敷き毛布　電気しき毛布　ダブル　頭寒足熱　省エネ　椙山紡織",
       "itemPrice": 5280,
@@ -416,6 +449,7 @@
     "lifejoy-shop:10000052",
     "sugibou:10000045",
     "frdm:10000056",
-    "migaber:10000081"
+    "migaber:10000081",
+    "ffws:10017671"
   ]
 }
