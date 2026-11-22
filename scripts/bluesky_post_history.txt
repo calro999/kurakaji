@@ -60,3 +60,6 @@ https://kurakaji.vercel.app/articles/november-compact-kotatsu-warmth.html
 https://kurakaji.vercel.app/articles/november-clothes-dryer-dehumidifier.html
 /home/runner/work/kurakaji/kurakaji/articles/november-clothes-dryer-dehumidifier.html
 【プロ厳選】【11月最新】冬の部屋干し・結露対策！速乾衣類乾燥除湿機特集
+https://kurakaji.vercel.app/articles/cluster/panel-heater-vs-ceramic.html
+/home/runner/work/kurakaji/kurakaji/articles/cluster/panel-heater-vs-ceramic.html
+【プロ厳選】パネルヒーター vs セラミック！足元暖房対決
