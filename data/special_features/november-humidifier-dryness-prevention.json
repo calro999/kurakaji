@@ -9,7 +9,7 @@
     "アロマ加湿器 小型 寝室"
   ],
   "created_at": "2026-11-15 09:17",
-  "updated_at": "2026-11-22 09:25",
+  "updated_at": "2026-11-23 01:26",
   "items": [
     {
       "itemCode": "shinetourmarket:10000311",
@@ -74,6 +74,39 @@
         "参考価格: 約7,999円",
         "安全規格: 国内PSEマーク適合",
         "本体機能: 就寝時やテレワーク中も音 / 狭い部屋やワンルーム"
+      ]
+    },
+    {
+      "itemCode": "shinetourmarket:10000079",
+      "itemName": "【COUPONで19,980円】加湿器 スチーム式 15L 大容量 加熱式 ガラス 透明水タンク スチーム加湿器 ガラススチーム加湿器 大型 業務用 タワー型 静音 湿度設定 タイマー 48時間連続稼働 加湿器 スチーム 加湿 器 20 畳 以上 リビング 寝室 居間 学校 家庭 KEECOON",
+      "itemPrice": 23980,
+      "itemCaption": "PS マーク種類：PSE マークあり届出事業者名：AMC株式会社登録検査機関名：Shenzhen CTB Testing Technology Co., Ltd. 本商品は、電波法令で定められている技術基準に適合していることを証明する技適マークが貼付されていない無線機器であり、日本国内で使用する場合は、電波法違反になるおそれがございます。ご使用の際には、十分ご注意いただきますようお願いいたします。詳しくは、最寄りの総務省総合通信局へお問い合わせください。",
+      "affiliateUrl": "https://hb.afl.rakuten.co.jp/hgc/g00tu9un.j9rugc71.g00tu9un.j9ruh114/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fshinetourmarket%2Fkc-mh-j36%2F&m=http%3A%2F%2Fm.rakuten.co.jp%2Fshinetourmarket%2Fi%2F10000079%2F&rafcid=wsc_i_is_4b79f26f-f12a-4720-88b2-c3705cd31fa3",
+      "reviewCount": 21,
+      "reviewAverage": 4.33,
+      "images": [
+        "https://thumbnail.image.rakuten.co.jp/@0_mall/shinetourmarket/cabinet/11156881/11188728/imgrc0143358391.jpg",
+        "https://thumbnail.image.rakuten.co.jp/@0_mall/shinetourmarket/cabinet/14181882/1.jpg",
+        "https://thumbnail.image.rakuten.co.jp/@0_mall/shinetourmarket/cabinet/14181882/2.jpg"
+      ],
+      "clean_name": "加湿器 スチーム式 15L 大容量 加熱式 ガラス 透明水タ",
+      "catchphrase": "電気代と使いやすさに配慮されたおすすめの1台",
+      "rate": 97,
+      "editorial_review": "楽天市場の最新実売データでも高い評価を集める人気モデル。就寝時やテレワーク中も音が気になりにくい静音設計など日々の暮らしを快適にする実用性を備え、加湿・乾燥対策家電として申し分のない仕上がりです。ヒーターでお湯を沸かすため電気代がやや高めで本体周辺が熱くなりますという点に留意して使用すれば、冬の暮らしの満足度を確実に引き上げてくれます。",
+      "pros": [
+        "就寝時やテレワーク中も音が気になりにくい静音設計",
+        "切り忘れを防ぐ便利なオフタイマー機能を標準装備",
+        "プロ仕様の高い耐久性と安心のメーカー長期サポート"
+      ],
+      "cons": [
+        "ヒーターでお湯を沸かすため電気代がやや高めで本体周辺が熱くなります",
+        "電源コードの長さ（約1.5m）を事前に確認し、延長コードの定格容量にご注意ください"
+      ],
+      "specs": [
+        "ジャンル: 加湿・乾燥対策家電",
+        "参考価格: 約23,980円",
+        "安全規格: 国内PSEマーク適合",
+        "本体機能: 就寝時やテレワーク中も音 / 切り忘れを防ぐ便利なオフタイマー機能を標準装備"
       ]
     },
     {
@@ -486,6 +519,7 @@
     "irisplaza-r:10158664",
     "kagulabo:10003104",
     "hanwha:10000700",
-    "shinetourmarket:10000311"
+    "shinetourmarket:10000311",
+    "shinetourmarket:10000079"
   ]
 }
