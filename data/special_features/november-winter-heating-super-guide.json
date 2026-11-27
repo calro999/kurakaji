@@ -9,7 +9,7 @@
     "脱衣所 ヒーター ヒートショック対策"
   ],
   "created_at": "2026-11-15 09:17",
-  "updated_at": "2026-11-26 03:24",
+  "updated_at": "2026-11-27 03:31",
   "items": [
     {
       "itemCode": "gmy-japan:10000063",
@@ -524,6 +524,7 @@
     "mikirona:10000063",
     "e-kurashi:10002588",
     "lworld:10000192",
-    "tripleshop:10000190"
+    "tripleshop:10000190",
+    "enetroom:10187176"
   ]
 }
