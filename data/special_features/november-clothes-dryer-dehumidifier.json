@@ -8,7 +8,7 @@
     "部屋干し スピード乾燥 除湿機"
   ],
   "created_at": "2026-11-15 09:17",
-  "updated_at": "2026-11-27 03:30",
+  "updated_at": "2026-11-28 03:06",
   "items": [
     {
       "itemCode": "f042081-kakuda:10003378",
@@ -521,6 +521,7 @@
     "ksk-store:10000175",
     "party-honpo:10523824",
     "myhomeshop:10000409",
-    "unibizonlinestore:10000162"
+    "unibizonlinestore:10000162",
+    "ksk-shop:10000001"
   ]
 }
